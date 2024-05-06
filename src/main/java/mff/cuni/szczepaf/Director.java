@@ -1,4 +1,7 @@
 package mff.cuni.szczepaf;
 
-public class Director implements IMediaEntity {
+public class Director extends Person {
+    public Director(String name) {
+        super(name);
+    }
 }
