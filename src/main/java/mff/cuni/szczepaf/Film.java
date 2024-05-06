@@ -66,14 +66,13 @@ public class Film implements IMediaEntity {
             actorNames += actor.getName();
         }
 
-        return "Film{" +
-                "duration='" + duration + '\'' +
-                ", name='" + name + '\'' +
-                ", dateCreated='" + dateCreated + '\'' +
+        return "Film: " +
+                "name='" + name + "'" +
+                ", duration='" + duration + "'" +
+                ", dateCreated='" + dateCreated + "'" +
                 ", directors=[" + directorNames + "]" +
                 ", actors=[" + actorNames + "]" +
-                ", rating=" + rating.getRatingValue() +
-                '}';
+                ", rating=" + rating.getRatingValue();
     }
 
 
