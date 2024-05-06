@@ -21,6 +21,14 @@
             <artifactId>jsoup</artifactId>
             <version>1.13.1</version>
         </dependency>
+        <dependency>
+            <!-- Used for parsing the data from JSON dictionaries into IMedia Entities -->
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
+
     </dependencies>
+
 
 </project>
