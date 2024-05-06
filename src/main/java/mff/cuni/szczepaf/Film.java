@@ -46,4 +46,35 @@ public class Film implements IMediaEntity {
     public Rating getRating() {
         return rating;
     }
+
+
+    @Override
+    public String toString() {
+        String directorNames = "";
+        for (Director director : directors) {
+            if (!directorNames.isEmpty()) {
+                directorNames += ", ";
+            }
+            directorNames += director.getName();
+        }
+
+        String actorNames = "";
+        for (Actor actor : actors) {
+            if (!actorNames.isEmpty()) {
+                actorNames += ", ";
+            }
+            actorNames += actor.getName();
+        }
+
+        return "Film{" +
+                "duration='" + duration + '\'' +
+                ", name='" + name + '\'' +
+                ", dateCreated='" + dateCreated + '\'' +
+                ", directors=[" + directorNames + "]" +
+                ", actors=[" + actorNames + "]" +
+                ", rating=" + rating.getRatingValue() +
+                '}';
+    }
+
+
 }

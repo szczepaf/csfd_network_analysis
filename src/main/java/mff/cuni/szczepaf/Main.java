@@ -9,11 +9,4 @@ public class Main {
 
         String jsonData = downloader.downloadByID(ID);
 
-        if (jsonData != null) {
-            System.out.println("JSON Data:");
-            System.out.println(jsonData);
-        } else {
-            System.out.println("No JSON data found at the specified URL.");
-        }
-    }
 }

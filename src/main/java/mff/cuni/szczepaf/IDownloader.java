@@ -1,6 +1,11 @@
 package mff.cuni.szczepaf;
 
 public interface IDownloader {
-    String downloadByURL(String url);
-    String downloadByID(String id);
+    static String downloadByURL(String url) {
+        return null;
+    }
+
+    static String downloadByID(String id) {
+        return null;
+    }
 }

@@ -19,8 +19,7 @@ public class FilmDownloader implements IDownloader {
      */
 
     static String structureURLIDPrefix = "https://www.csfd.cz/film/";
-    @Override
-    public String downloadByURL(String url) {
+    public static String downloadByURL(String url) {
         try {
             Document doc = Jsoup.connect(url).get();
             Element script = doc.selectFirst("script[type=application/ld+json]");
@@ -43,8 +42,7 @@ public class FilmDownloader implements IDownloader {
      * @param id The ID of the film to download.
      * @return A String containing the JSON data of the film.
      */
-    @Override
-    public String downloadByID(String id) {
-        return this.downloadByURL(structureURLIDPrefix + id);
+    public static String downloadByID(String id) {
+        return downloadByURL(structureURLIDPrefix + id);
     }
 }
