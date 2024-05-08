@@ -1,7 +1,5 @@
 package mff.cuni.szczepaf;
 
 public interface IParser {
-    static IMediaEntity parse(String HTML) {
-        return null;
-    }
+    public IMediaEntity parse(String HTML);
 }

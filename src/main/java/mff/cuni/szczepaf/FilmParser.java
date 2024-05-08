@@ -11,7 +11,8 @@ public class FilmParser implements IParser {
      * @param dataDict JSON string containing film data.
      * @return Film object with data from the JSON string.
      */
-    public static Film parse(String dataDict) {
+    @Override
+    public Film parse(String dataDict) {
         JSONObject jsonObject = new JSONObject(dataDict);
 
         // Extract fields
@@ -28,7 +29,7 @@ public class FilmParser implements IParser {
         return new Film(duration, name, dateCreated, directors, actors, rating);
     }
 
-    private static ArrayList<Director> parseDirectors(JSONArray directorsArray) {
+    private ArrayList<Director> parseDirectors(JSONArray directorsArray) {
         ArrayList<Director> directors = new ArrayList<>();
         if (directorsArray != null) {
             for (int i = 0; i < directorsArray.length(); i++) {
@@ -40,7 +41,7 @@ public class FilmParser implements IParser {
         return directors;
     }
 
-    private static ArrayList<Actor> parseActors(JSONArray actorsArray) {
+    private ArrayList<Actor> parseActors(JSONArray actorsArray) {
         ArrayList<Actor> actors = new ArrayList<>();
         if (actorsArray != null) {
             for (int i = 0; i < actorsArray.length(); i++) {
@@ -52,7 +53,7 @@ public class FilmParser implements IParser {
         return actors;
     }
 
-    private static Rating parseRating(JSONObject ratingObject) {
+    private Rating parseRating(JSONObject ratingObject) {
         if (ratingObject != null) {
             float ratingValue = ratingObject.optFloat("ratingValue", 0);
             int ratingCount = ratingObject.optInt("ratingCount", 0);

@@ -5,7 +5,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Page implements IMediaEntity {
@@ -13,7 +12,7 @@ public class Page implements IMediaEntity {
     private ArrayList<String> movieURLs;
 
     public Page(String HTMLSource) {
-        this.movieURLs = getURLsFromHTMLSource(HTMLSource);
+        this.movieURLs = parseMovieURLsFromHTMLSource(HTMLSource);
     }
 
     /**
@@ -21,7 +20,7 @@ public class Page implements IMediaEntity {
      * @param HTMLSource The HTML for one page of results.
      * @return An ArrayList of URLs as strings, empty if parsing fails.
      */
-    public ArrayList<String> getURLsFromHTMLSource(String HTMLSource) {
+    public ArrayList<String> parseMovieURLsFromHTMLSource(String HTMLSource) {
         ArrayList<String> urls = new ArrayList<>();
         try {
             Document document = Jsoup.parse(HTMLSource);
@@ -32,9 +31,8 @@ public class Page implements IMediaEntity {
             // Iterate over all elements found and extract the link
             for (Element link : links) {
                 String url = link.attr("href");
-                if (!url.isEmpty()) {
-                    urls.add(url);
-                }
+                urls.add(url);
+
             }
         } catch (Exception e) {
             System.out.println("Error while parsing HTML with found movies and extracting URLs.");

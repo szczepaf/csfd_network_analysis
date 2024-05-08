@@ -31,8 +31,7 @@ public class FilmDownloader implements IDownloader {
             }
         } catch (IOException e) {
             // Catch the IOException from Jsoup get method
-            System.out.println("Unable to download the JSON with information about the movie.");
-            System.out.println(e);
+            System.err.println("Unable to download the JSON with information about the movie: " + e.getMessage());
             return null;
         }
     }
