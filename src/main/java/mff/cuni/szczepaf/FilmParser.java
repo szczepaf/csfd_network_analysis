@@ -3,7 +3,6 @@ package mff.cuni.szczepaf;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
-import java.util.List;
 
 public class FilmParser implements IParser {
 
@@ -22,15 +21,15 @@ public class FilmParser implements IParser {
         Rating rating = parseRating(jsonObject.optJSONObject("aggregateRating"));
 
         // Parse directors, actors
-        List<Director> directors = parseDirectors(jsonObject.optJSONArray("director"));
-        List<Actor> actors = parseActors(jsonObject.optJSONArray("actor"));
+        ArrayList<Director> directors = parseDirectors(jsonObject.optJSONArray("director"));
+        ArrayList<Actor> actors = parseActors(jsonObject.optJSONArray("actor"));
 
 
         return new Film(duration, name, dateCreated, directors, actors, rating);
     }
 
-    private static List<Director> parseDirectors(JSONArray directorsArray) {
-        List<Director> directors = new ArrayList<>();
+    private static ArrayList<Director> parseDirectors(JSONArray directorsArray) {
+        ArrayList<Director> directors = new ArrayList<>();
         if (directorsArray != null) {
             for (int i = 0; i < directorsArray.length(); i++) {
                 JSONObject directorObject = directorsArray.getJSONObject(i);
@@ -41,8 +40,8 @@ public class FilmParser implements IParser {
         return directors;
     }
 
-    private static List<Actor> parseActors(JSONArray actorsArray) {
-        List<Actor> actors = new ArrayList<>();
+    private static ArrayList<Actor> parseActors(JSONArray actorsArray) {
+        ArrayList<Actor> actors = new ArrayList<>();
         if (actorsArray != null) {
             for (int i = 0; i < actorsArray.length(); i++) {
                 JSONObject actorObject = actorsArray.getJSONObject(i);
