@@ -50,29 +50,32 @@ public class Film implements IMediaEntity {
 
     @Override
     public String toString() {
-        String directorNames = "";
-        for (Director director : directors) {
-            if (!directorNames.isEmpty()) {
-                directorNames += ", ";
-            }
-            directorNames += director.getName();
-        }
+        StringBuilder filmString = new StringBuilder();
+        filmString.append("{");
 
-        String actorNames = "";
-        for (Actor actor : actors) {
-            if (!actorNames.isEmpty()) {
-                actorNames += ", ";
-            }
-            actorNames += actor.getName();
-        }
+        filmString.append("\"name\": \"").append(name).append("\", ");
+        filmString.append("\"duration\": \"").append(duration).append("\", ");
+        filmString.append("\"dateCreated\": \"").append(dateCreated).append("\", ");
 
-        return "Film: " +
-                "name='" + name + "'" +
-                ", duration='" + duration + "'" +
-                ", dateCreated='" + dateCreated + "'" +
-                ", directors=[" + directorNames + "]" +
-                ", actors=[" + actorNames + "]" +
-                ", rating=" + rating.getRatingValue();
+        filmString.append("\"directors\": [");
+        for (int i = 0; i < directors.size(); i++) {
+            if (i > 0) filmString.append(", ");
+            filmString.append("\"").append(directors.get(i).getName()).append("\"");
+        }
+        filmString.append("], ");
+
+        filmString.append("\"actors\": [");
+        for (int i = 0; i < actors.size(); i++) {
+            if (i > 0) filmString.append(", ");
+            filmString.append("\"").append(actors.get(i).getName()).append("\"");
+        }
+        filmString.append("], ");
+
+        filmString.append("\"rating\": ").append(rating.getRatingValue());
+
+        filmString.append("}");
+
+        return filmString.toString();
     }
 
 
