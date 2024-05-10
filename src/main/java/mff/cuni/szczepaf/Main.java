@@ -6,7 +6,9 @@ public class Main {
 
         String ID = "1096199";
 
-        String jsonData = FilmDownloader.downloadByID(ID);
+        FilmDownloader fd = new FilmDownloader();
+
+        String jsonData = fd.downloadByID(ID);
         FilmParser fp =  new FilmParser();
         Film f = fp.parse(jsonData);
         System.out.println(f);
