@@ -33,7 +33,7 @@ public class PageTest {
         onePage = onePage.replaceAll("\r\n|\n", "").replaceAll("\"viewId\":\\d+", "\"viewId\":1111");
 
 
-        
+
     }
 
     private static String getSearchParams() {
