@@ -3,6 +3,7 @@ package mff.cuni.szczepaf;
 import java.util.List;
 import java.util.ArrayList;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -17,21 +18,36 @@ public class FilmParser implements IParser {
      */
     @Override
     public Film parse(String dataDict) {
-        JSONObject jsonObject = new JSONObject(dataDict);
 
-        // Extract fields
-        String duration = jsonObject.optString("duration");
-        String name = jsonObject.optString("name");
-        String dateCreated = jsonObject.optString("dateCreated");
-        Rating rating = parseRating(jsonObject.optJSONObject("aggregateRating"));
+        try {
+            JSONObject jsonObject = new JSONObject(dataDict);
 
-        // Parse directors, actors
-        ArrayList<Director> directors = parseDirectors(jsonObject.optJSONArray("director"));
-        ArrayList<Actor> actors = parseActors(jsonObject.optJSONArray("actor"));
+            // Extract fields
+            String durationStr = jsonObject.optString("duration");
+            int duration = 0;
+            if (durationStr != null && durationStr.startsWith("PT") && durationStr.endsWith("M")) {
+                duration = Integer.parseInt(durationStr.substring(2, durationStr.length() - 1)); }
 
+            String name = jsonObject.optString("name");
+            int dateCreated = Integer.parseInt(jsonObject.optString("dateCreated"));
+            Rating rating = parseRating(jsonObject.optJSONObject("aggregateRating"));
 
-        return new Film(duration, name, dateCreated, directors, actors, rating);
+            // Parse directors, actors
+            ArrayList<Director> directors = parseDirectors(jsonObject.optJSONArray("director"));
+            ArrayList<Actor> actors = parseActors(jsonObject.optJSONArray("actor"));
+
+            return new Film(duration, name, dateCreated, directors, actors, rating);
+        }
+        catch (JSONException e) {
+            System.err.println("JSON parsing error for : " + dataDict + ": " + e.getMessage());
+            return null;
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Error parsing duration: " + e.getMessage());
+            return null;
+        }
     }
+
 
     private ArrayList<Director> parseDirectors(JSONArray directorsArray) {
         ArrayList<Director> directors = new ArrayList<>();
@@ -75,6 +91,16 @@ public class FilmParser implements IParser {
         }
     }
 
+    public void dumpFilm(Film film, String filename, String filmID) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
+            writer.write(filmID + ": " + film.toString());
+            writer.newLine();
+        } catch (IOException e) {
+            System.err.println("Error writing to file " + filename + ": " + e);
+        }
+    }
+
+
     public void dumpFilms(List<Film> films, String filename) {
         for (Film film : films) {
             dumpFilm(film, filename);
@@ -97,4 +123,57 @@ public class FilmParser implements IParser {
             return null;
         }
     }
+
+
+
+    public Film parseFilmFromDump(String dataDict) {
+        try {
+            JSONObject jsonObject = new JSONObject(dataDict);
+
+            int duration = jsonObject.optInt("duration", 0);
+            String name = jsonObject.optString("name");
+            int dateCreated = jsonObject.optInt("dateCreated", 0);
+
+            Rating rating = parseSimpleRating(jsonObject.optFloat("rating"));
+
+            // Parse directors, actors
+            ArrayList<Director> directors = parseDirectorsFromDump(jsonObject.optJSONArray("directors"));
+            ArrayList<Actor> actors = parseActorsFromDump(jsonObject.optJSONArray("actors"));
+
+            return new Film(duration, name, dateCreated, directors, actors, rating);
+        } catch (JSONException e) {
+            System.err.println("JSON parsing error for : " + dataDict + ": " + e.getMessage());
+            return null;
+        }
+    }
+
+    private Rating parseSimpleRating(float ratingValue) {
+        int ratingCount = 0;
+        return new Rating(ratingValue, ratingCount);
+    }
+
+    private ArrayList<Director> parseDirectorsFromDump(JSONArray directorsArray) {
+        ArrayList<Director> directors = new ArrayList<>();
+        if (directorsArray != null) {
+            for (int i = 0; i < directorsArray.length(); i++) {
+                String name = directorsArray.optString(i);
+                directors.add(new Director(name));
+            }
+        }
+        return directors;
+    }
+
+    private ArrayList<Actor> parseActorsFromDump(JSONArray actorsArray) {
+        ArrayList<Actor> actors = new ArrayList<>();
+        if (actorsArray != null) {
+            for (int i = 0; i < actorsArray.length(); i++) {
+                String name = actorsArray.optString(i);
+                actors.add(new Actor(name));
+            }
+        }
+        return actors;
+    }
+
 }
+
+
