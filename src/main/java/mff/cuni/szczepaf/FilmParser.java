@@ -80,4 +80,21 @@ public class FilmParser implements IParser {
             dumpFilm(film, filename);
         }
     }
+
+    /**
+     * Extracts the movie ID from a given film URL.
+     * @param url the URL from which the movie ID should be extracted.
+     * @return the movie ID as a string.
+     */
+    public String extractFilmIDFromURL(String url) {
+        int idStart = url.indexOf("film/") + 5;
+        int idEnd = url.indexOf("-", idStart);
+
+        if (idStart > 4 && idEnd > idStart) { // Check bounds
+            return url.substring(idStart, idEnd);
+        } else {
+            System.err.println("Invalid URL format for extracting film ID: " + url);
+            return null;
+        }
+    }
 }

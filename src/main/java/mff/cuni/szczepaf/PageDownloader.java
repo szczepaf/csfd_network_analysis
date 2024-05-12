@@ -15,6 +15,10 @@ public class PageDownloader implements IDownloader{
         this.timeout = timeout;
     }
 
+    public PageDownloader(){
+        this.timeout = 30;
+    }
+
     @Override
     public String downloadByID(String url){
         return null;

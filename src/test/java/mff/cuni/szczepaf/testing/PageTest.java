@@ -23,7 +23,7 @@ public class PageTest {
             String onePage = getOnePager();
 
             String expectedOutput = "";
-            try (BufferedReader reader = new BufferedReader(new FileReader("OnePageResults.txt"))) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("TestFiles/OnePageResults.txt"))) {
                 StringBuilder builder = new StringBuilder();
                 String line;
                 while ((line = reader.readLine()) != null) {
@@ -71,7 +71,7 @@ public class PageTest {
         String onePage = getTwoPager();
 
         String expectedOutput = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader("TwoPageResults.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("TestFiles/TwoPageResults.txt"))) {
             StringBuilder builder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
@@ -128,7 +128,7 @@ public class PageTest {
     @Test
     public void testPageParsing(){
         String onePageStr = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader("OnePageResults.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("TestFiles/OnePageResults.txt"))) {
             StringBuilder builder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
@@ -141,7 +141,7 @@ public class PageTest {
         }
 
         PageParser parser = new PageParser();
-        Page page = (Page) parser.parse(onePageStr);
+        Page page = parser.parse(onePageStr);
 
         // Again, the page will change in time. Lets at least check that it contains some of the current films.
         ArrayList<String> movieURLs = page.getMovieURLs();

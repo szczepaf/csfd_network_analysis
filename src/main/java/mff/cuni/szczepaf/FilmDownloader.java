@@ -11,6 +11,15 @@ import java.io.IOException;
  */
 public class FilmDownloader implements IDownloader {
 
+    public FilmDownloader(int timeout) {
+        this.timeout = timeout;
+    }
+    public FilmDownloader(){
+        this.timeout = 30;
+    }
+
+    private int timeout;
+
     /**
      * Downloads film data in JSON format from the specified URL of a CSFD movie.
      * The JSON data is embedded in a tag "application/ld+json".
@@ -25,6 +34,7 @@ public class FilmDownloader implements IDownloader {
             Element script = doc.selectFirst("script[type=application/ld+json]");
 
             if (script != null) {
+                Thread.sleep(timeout * 1000L);
                 return script.data();
             } else {
                 return "Empty script for url: " + url;
@@ -33,6 +43,11 @@ public class FilmDownloader implements IDownloader {
             // Catch the IOException from Jsoup get method
             System.err.println("Unable to download the JSON with information about the movie: " + e.getMessage());
             return "Unable to retrieve film info from url: " + url;
+        } catch (InterruptedException e) {
+            System.err.println("Thread interrupted: " + e.getMessage());
+            return "Unable to retrieve film info from url: " + url;
+
+
         }
     }
 

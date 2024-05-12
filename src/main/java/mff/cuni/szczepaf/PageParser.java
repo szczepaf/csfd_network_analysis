@@ -25,7 +25,7 @@ public class PageParser implements IParser {
 
     }
     @Override
-    public IMediaEntity parse(String HTMLSource) {
+    public Page parse(String HTMLSource) {
         ArrayList<String> urls = new ArrayList<>();
         try {
             Document document = Jsoup.parse(HTMLSource);
@@ -52,7 +52,7 @@ public class PageParser implements IParser {
         ArrayList<String> pageStrings = splitPages(concatenatedPages);
         ArrayList<Page> pages = new ArrayList<Page>();
         for (String pageString : pageStrings){
-            Page page = (Page) parse(pageString);
+            Page page = parse(pageString);
             pages.add(page);
         }
 
