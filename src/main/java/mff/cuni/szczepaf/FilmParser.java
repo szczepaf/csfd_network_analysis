@@ -1,8 +1,12 @@
 package mff.cuni.szczepaf;
 
+import java.util.List;
+import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class FilmParser implements IParser {
 
@@ -60,5 +64,20 @@ public class FilmParser implements IParser {
             return new Rating(ratingValue, ratingCount);
         }
         return null;
+    }
+
+    public void dumpFilm(Film film, String filename) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
+            writer.write(film.toString());
+            writer.newLine();
+        } catch (IOException e) {
+            System.err.println("Error writing to file " + filename + ": " + e);
+        }
+    }
+
+    public void dumpFilms(List<Film> films, String filename) {
+        for (Film film : films) {
+            dumpFilm(film, filename);
+        }
     }
 }

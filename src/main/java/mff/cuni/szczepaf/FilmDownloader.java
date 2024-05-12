@@ -27,12 +27,12 @@ public class FilmDownloader implements IDownloader {
             if (script != null) {
                 return script.data();
             } else {
-                return null;
+                return "Empty script for url: " + url;
             }
         } catch (IOException e) {
             // Catch the IOException from Jsoup get method
             System.err.println("Unable to download the JSON with information about the movie: " + e.getMessage());
-            return null;
+            return "Unable to retrieve film info from url: " + url;
         }
     }
 

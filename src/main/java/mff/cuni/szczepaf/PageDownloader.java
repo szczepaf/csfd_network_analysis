@@ -48,10 +48,11 @@ public class PageDownloader implements IDownloader{
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("Thread interrupted: " + e.getMessage());
-        } finally {
-            // Join all pages collected into a single String with "PageSeparator" as the separator
-            return String.join("PageSeparator", contactedPages);
         }
+
+        // Join all pages collected into a single String with "PageSeparator" as the separator
+        return String.join("PageSeparator", contactedPages);
+
     }
 
 
