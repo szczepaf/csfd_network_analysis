@@ -69,7 +69,7 @@ public class Film implements IMediaEntity {
         StringBuilder filmString = new StringBuilder();
         filmString.append("{");
 
-        filmString.append("\"name\": \"").append(name).append("\", ");
+        filmString.append("\"name\": \"").append(name.replace("\"", "'")).append("\", ");
         filmString.append("\"duration\":").append(duration).append(", ");
         filmString.append("\"dateCreated\": ").append(dateCreated).append(", ");
 

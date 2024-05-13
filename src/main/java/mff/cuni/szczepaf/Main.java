@@ -8,10 +8,10 @@ public class Main {
         String sourceName = "FilmLinks/porevolucniCeskyCeskoslovenskyFilmURLs.csv";
 
         String targetName = "FilmData/porevolucniCeskyCeskoslovenskyFilm.csv";
-        // Controller.downloadFilmsFromLinks(sourceName, targetName, 5);
+        // Controller.downloadFilmsFromLinks(sourceName, targetName, 10);
 
-        // String conditionJSONString = "{\"duration\":[\"<120\", \">50\"], \"dateCreated\": [\"=2015\"], \"rating\":[\">80.5\"], \"actors\":[{\"contains\":\"Ondřej Brzobohatý\"}, {\"contains\": \"Ivan Trojan\"}, {\"notcontains\":\"Jan Werich\"}]}";
-        String conditionJSONString = "{\"actors\":[{\"contains\":\"Ondřej Gregor Brzobohatý\"}]}";
+        String conditionJSONString = "{\"duration\":[\"<120\", \">50\"], \"dateCreated\": [\">2015\"], \"rating\":[\">80.5\"]}";
+        //String conditionJSONString = "{\"actors\":[{\"contains\":\"Ondřej Gregor Brzobohatý\"}]}";
 
         FilmCondition fc = ConditionFactory.createConditionFromJson(conditionJSONString);
         FilmNetwork network = new FilmNetwork();
