@@ -87,7 +87,77 @@ public class ConditionFactoryTest {
         assertTrue(condition.meetsCondition(film), "Complex condition not satisfied.");
     }
 
+    @Test
+    public void testEdgeConditionActors() {
+        String conditionJSONString = "{\"commonActors\" : 2}";
+        EdgeCondition condition = ConditionFactory.createEdgeConditionFromJson(conditionJSONString);
 
+        Film film1 = new Film(120, "Interstellar", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Christian Bale"), new Actor("Christian Bale jr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        Film film2 = new Film(120, "Interstellar 2", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Matt Daemon"), new Actor("Christian Bale jr."),new Actor("Matt Daemon sr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        assertTrue(condition.meetsCondition(film1, film2), "Edge condition for common actors not satisfied.");
+    }
+
+    @Test
+    public void testEdgeConditionActorsNot() {
+        String conditionJSONString = "{\"commonActors\" : 2}";
+        EdgeCondition condition = ConditionFactory.createEdgeConditionFromJson(conditionJSONString);
+
+        Film film1 = new Film(120, "Interstellar", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Christian Bale"), new Actor("Christian Bale jr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        Film film2 = new Film(120, "Interstellar 2", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Matt Daemon"), new Actor("Christian Bale jr. the second"),new Actor("Matt Daemon sr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        assertFalse(condition.meetsCondition(film1, film2), "Edge condition for common actors not satisfied.");
+    }
+
+    @Test
+    public void testEdgeConditionDirector() {
+        String conditionJSONString = "{\"commonDirector\" : true}";
+        EdgeCondition condition = ConditionFactory.createEdgeConditionFromJson(conditionJSONString);
+
+        Film film1 = new Film(120, "Interstellar", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Christian Bale"), new Actor("Christian Bale jr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        Film film2 = new Film(120, "Interstellar 2", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Matt Daemon"), new Actor("Christian Bale jr. the second"),new Actor("Matt Daemon sr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        assertTrue(condition.meetsCondition(film1, film2), "Edge condition for common actors not satisfied.");
+    }
+
+    @Test
+    public void testEdgeConditionDirectorNot() {
+        String conditionJSONString = "{\"commonDirector\" : true}";
+        EdgeCondition condition = ConditionFactory.createEdgeConditionFromJson(conditionJSONString);
+
+        Film film1 = new Film(120, "Interstellar", 2019,
+                List.of(new Director("Jan Hřebejk")),
+                List.of(new Actor("Christian Bale"), new Actor("Christian Bale jr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        Film film2 = new Film(120, "Interstellar 2", 2019,
+                List.of(new Director("Jan Hřebejk the second")),
+                List.of(new Actor("Matt Daemon"), new Actor("Christian Bale jr. the second"),new Actor("Matt Daemon sr."), new Actor("Christian Bale sr.")),
+                new Rating(80.0F, 150));
+
+        assertFalse(condition.meetsCondition(film1, film2), "Edge condition for common actors not satisfied.");
+    }
 
 
 }
