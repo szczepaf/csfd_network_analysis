@@ -2,6 +2,7 @@ package mff.cuni.szczepaf;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Film implements IMediaEntity {
     private int duration;
@@ -63,7 +64,21 @@ public class Film implements IMediaEntity {
         return rating;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Film film = (Film) o;
+        return duration == film.duration &&
+                dateCreated == film.dateCreated &&
+                name.equals(film.name) &&
+                directors.equals(film.directors);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(duration, name, dateCreated, directors);
+    }
     @Override
     public String toString() {
         StringBuilder filmString = new StringBuilder();

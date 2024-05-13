@@ -10,14 +10,20 @@ public class Main {
         String targetName = "FilmData/porevolucniCeskyCeskoslovenskyFilm.csv";
         // Controller.downloadFilmsFromLinks(sourceName, targetName, 10);
 
-        String conditionJSONString = "{\"duration\":[\"<120\", \">50\"], \"dateCreated\": [\">2015\"], \"rating\":[\">80.5\"]}";
-        //String conditionJSONString = "{\"actors\":[{\"contains\":\"Ondřej Gregor Brzobohatý\"}]}";
+        // String conditionJSONString = "{\"duration\":[\"<120\", \">50\"], \"dateCreated\": [\"=2s015\"], \"rating\":[\">80.5\"], \"actors\":[{\"contains\":\"Ondřej Brzobohatý\"}, {\"contains\": \"Ivan Trojan\"}, {\"notcontains\":\"Jan Werich\"}]}";
+        String conditionJSONString = "bad condition";
 
         FilmCondition fc = ConditionFactory.createConditionFromJson(conditionJSONString);
         FilmNetwork network = new FilmNetwork();
 
         network.loadFilms(targetName, fc);
-        network.printNodes();
+        //network.printNodes();
+
+        String filename = "TestFiles/FilmsForNodeFilterTesting.txt";
+        FilmNetwork filmNetwork = new FilmNetwork();
+        fc = ConditionFactory.createConditionFromJson(conditionJSONString);
+        filmNetwork.loadFilms(filename, fc);
+        filmNetwork.printNodes();
 
     }
 

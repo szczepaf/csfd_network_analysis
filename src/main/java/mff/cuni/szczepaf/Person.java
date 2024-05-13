@@ -25,13 +25,10 @@ public class Person implements IMediaEntity{
         // That is of course not ideal, but at the same time, CSFD is strict about having differences in names for different actors.
         // Let's rely on them to be consistent.
 
-        if (obj == this) {
-            return true;
-        }
+        if (obj == this) return true;
 
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
-        }
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+
 
         Person person = (Person) obj;
         return name.equals(person.name);

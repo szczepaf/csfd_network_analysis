@@ -1,5 +1,6 @@
 package mff.cuni.szczepaf;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import java.util.function.Predicate;
@@ -7,6 +8,7 @@ import java.util.function.Predicate;
 public class ConditionFactory {
 
     public static FilmCondition createConditionFromJson(String jsonCondition) {
+        try{
         JSONObject conditions = new JSONObject(jsonCondition);
         Predicate<Film> compositeCondition = film -> true;
 
@@ -51,6 +53,11 @@ public class ConditionFactory {
 
         Predicate<Film> finalCompositeCondition = compositeCondition;
         return film -> finalCompositeCondition.test(film);
+        }
+        catch (JSONException e){
+            System.err.println("Invalid Exception! Check your string that is parsed into the exception.");
+            throw (e);
+        }
     }
 
     private static Predicate<Film> parseDurationCondition(String condition) {

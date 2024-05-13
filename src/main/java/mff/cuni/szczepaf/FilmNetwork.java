@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 
 public class FilmNetwork implements INetwork {
 
+
     private ArrayList<Film> nodes = new ArrayList<>();
     public void loadFilms(String filename, FilmCondition condition) {
         FilmParser filmParser = new FilmParser();
@@ -38,6 +39,10 @@ public class FilmNetwork implements INetwork {
     }
     public void export(String filename) {
 
+    }
+
+    public ArrayList<Film> getNodes() {
+        return nodes;
     }
 }
 
