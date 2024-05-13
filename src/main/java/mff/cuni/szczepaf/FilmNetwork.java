@@ -18,6 +18,13 @@ public class FilmNetwork implements INetwork {
     private ArrayList<Edge> edges = new ArrayList<>();
     // Edge is a <Film,Film> tuple (see class Edge).
 
+    public FilmNetwork(){
+
+    }
+
+    public FilmNetwork(ArrayList<Film> films){
+        this.nodes = films;
+    }
 
     /**
      * Based on the NodeCondition provided by the ConditionFactory, load Films~Nodes from a source filename into the graph.
