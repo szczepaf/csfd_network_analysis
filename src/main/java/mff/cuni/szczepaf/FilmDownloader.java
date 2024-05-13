@@ -19,10 +19,11 @@ public class FilmDownloader implements IDownloader {
     }
 
     private int timeout;
+    // Timeout in seconds between individual calls. Default = 30 seconds.
 
     /**
      * Downloads film data in JSON format from the specified URL of a CSFD movie.
-     * The JSON data is embedded in a tag "application/ld+json".
+     * The JSON data is embedded in a tag "application/ld+json" in the source.
      * @param url The URL of the movie webpage.
      * @return A String containing the JSON data of the film. Null if the data is not found.
      */

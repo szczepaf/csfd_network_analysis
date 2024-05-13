@@ -18,13 +18,5 @@ public class Rating implements IMediaEntity {
         return ratingCount;
     }
 
-    // These functions will be useful for deciding whether a movie has a good enough rating.
-    public boolean isLessThan(float f) {
-        return this.ratingValue < f;
-    }
-
-    public boolean isEqualTo(float f) {
-        return this.ratingValue == f;
-    }
 
 }

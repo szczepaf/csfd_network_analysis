@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import mff.cuni.szczepaf.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ConditionFactoryTest {
@@ -13,7 +12,7 @@ public class ConditionFactoryTest {
     @Test
     public void testCreateConditionFromJson_actorsContains() {
         String conditionJSONString = "{\"actors\":[{\"contains\":\"Ondřej Gregor Brzobohatý\"}]}";
-        FilmCondition condition = ConditionFactory.createConditionFromJson(conditionJSONString);
+        NodeCondition condition = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
 
         Film film = new Film(120, "Interstellar", 2020,
                 List.of(new Director("Christopher Nolan")),
@@ -26,7 +25,7 @@ public class ConditionFactoryTest {
     @Test
     public void testCreateConditionFromJson_actorsNotContains() {
         String conditionJSONString = "{\"actors\":[{\"notcontains\":\"Jan Werich\"}]}";
-        FilmCondition condition = ConditionFactory.createConditionFromJson(conditionJSONString);
+        NodeCondition condition = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
 
         Film film = new Film(120, "Interstellar", 2020,
                 List.of(new Director("Christopher Nolan")),
@@ -39,7 +38,7 @@ public class ConditionFactoryTest {
     @Test
     public void testCreateConditionFromJson_ratingLessThan() {
         String conditionJSONString = "{\"rating\":[\"<85.0\"]}";
-        FilmCondition condition = ConditionFactory.createConditionFromJson(conditionJSONString);
+        NodeCondition condition = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
 
         Film film = new Film(120, "Interstellar", 2020,
                 List.of(new Director("Christopher Nolan")),
@@ -52,7 +51,7 @@ public class ConditionFactoryTest {
     @Test
     public void testCreateConditionFromJson_durationMoreThan() {
         String conditionJSONString = "{\"duration\":[\">120\"]}";
-        FilmCondition condition = ConditionFactory.createConditionFromJson(conditionJSONString);
+        NodeCondition condition = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
 
         Film film = new Film(150, "Long Film", 2015,
                 List.of(),
@@ -64,7 +63,7 @@ public class ConditionFactoryTest {
     @Test
     public void testCreateConditionFromJson_createdInYear() {
         String conditionJSONString = "{\"dateCreated\":[\"=2020\"]}";
-        FilmCondition condition = ConditionFactory.createConditionFromJson(conditionJSONString);
+        NodeCondition condition = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
 
         Film film = new Film(100, "Recent Film", 2020,
                 List.of(),
@@ -78,7 +77,7 @@ public class ConditionFactoryTest {
     @Test
     public void testCreateConditionFromJson_complexConditions() {
         String conditionJSONString = "{\"duration\":[\">100\"], \"rating\":[\"<85.0\"], \"dateCreated\":[\"=2019\"], \"actors\":[{\"contains\":\"Christian Bale\"}]}";
-        FilmCondition condition = ConditionFactory.createConditionFromJson(conditionJSONString);
+        NodeCondition condition = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
 
         Film film = new Film(120, "Interstellar", 2019,
                 List.of(new Director("Jan Hřebejk")),

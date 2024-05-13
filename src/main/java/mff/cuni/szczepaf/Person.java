@@ -11,6 +11,7 @@ public class Person implements IMediaEntity{
     }
 
     private String name;
+    // The Firstname and Surname of a Person.
 
 
     @Override

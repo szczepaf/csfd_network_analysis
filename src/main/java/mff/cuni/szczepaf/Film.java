@@ -6,13 +6,18 @@ import java.util.Objects;
 
 public class Film implements IMediaEntity {
     private int duration;
+    // Duration of the film in minutes
     private String name;
+    // Name of the film
     private int dateCreated;
+    // Year of creation
     private List<Director> directors;
+    // 1 or more, usually just 1
     private List<Actor> actors;
+    // N actors
     private Rating rating;
+    // Rating class - rating value and rating count. Rating count is currently not important anyhow.
 
-    // Constructor
     public Film(int duration, String name, int dateCreated,
                 List<Director> directors, List<Actor> actors, Rating rating) {
         this.duration = duration;

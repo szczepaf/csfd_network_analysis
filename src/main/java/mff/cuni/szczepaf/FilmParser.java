@@ -82,6 +82,11 @@ public class FilmParser implements IParser {
         return null;
     }
 
+    /**
+     *
+      * @param film the Film Object to be dumped.
+     * @param filename the File to dump to. Will never be overwritten, just appended to.
+     */
     public void dumpFilm(Film film, String filename) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
             writer.write(film.toString());
@@ -91,6 +96,12 @@ public class FilmParser implements IParser {
         }
     }
 
+    /**
+     * Same method as the previous one, this time also with the Movie ID.
+     * @param film the Film Object to be dumped.
+     * @param filename the File to dump to. Will never be overwritten, just appended to.
+     * @param filmID the ID of the Movie.
+     */
     public void dumpFilm(Film film, String filename, String filmID) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
             writer.write(filmID + ": " + film.toString());
@@ -125,7 +136,9 @@ public class FilmParser implements IParser {
     }
 
 
-
+    /**
+     * Like the parse method, but not from the JSON of Downloader, but from the Dump of parser.
+     */
     public Film parseFilmFromDump(String dataDict) {
         try {
             JSONObject jsonObject = new JSONObject(dataDict);

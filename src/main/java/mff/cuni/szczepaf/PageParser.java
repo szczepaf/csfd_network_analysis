@@ -13,6 +13,12 @@ import java.io.IOException;
 public class PageParser implements IParser {
 
     public static final String FILM_URL_PREFIX = "https://www.csfd.cz/";
+
+    /**
+     * Just splits the long String from page downloader into individual pages.
+     * @param concatenatedPages the long string with all the pages.
+     * @return pages as strings.
+     */
     public ArrayList<String> splitPages(String concatenatedPages){
         String[] pages = concatenatedPages.split("PageSeparator");
         ArrayList<String> splitPages = new ArrayList<>();
@@ -24,6 +30,12 @@ public class PageParser implements IParser {
         return splitPages;
 
     }
+
+    /**
+     * Parses the HTML corresponding to one page of search results to the Page IMediaEntity.
+     * @param HTMLSource the source HTML.
+     * @return a corresponding Page object.
+     */
     @Override
     public Page parse(String HTMLSource) {
         ArrayList<String> urls = new ArrayList<>();
@@ -41,13 +53,18 @@ public class PageParser implements IParser {
 
             }
         } catch (Exception e) {
-            System.out.println("Error while parsing HTML with found movies and extracting URLs.");
-            System.out.println(e.getMessage());
+            System.err.println("Error while parsing HTML with found movies and extracting URLs.");
+            System.err.println(e.getMessage());
             return null;
         }
         return new Page(urls);
     }
 
+    /**
+     * A wrapper method on the long string.
+     * @param concatenatedPages the long string with all pages
+     * @return a list of Pages.
+     */
     public ArrayList<Page> parsePages(String concatenatedPages){
         ArrayList<String> pageStrings = splitPages(concatenatedPages);
         ArrayList<Page> pages = new ArrayList<Page>();
@@ -60,6 +77,11 @@ public class PageParser implements IParser {
     }
 
 
+    /**
+     * Dumps the Page - which means dumping the Film URLs on the page.
+     * @param page the Page to be dumped.
+     * @param filename the target file.
+     */
     public void dumpPage(Page page, String filename) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
             ArrayList<String> urls = page.getMovieURLs();
@@ -72,6 +94,8 @@ public class PageParser implements IParser {
         }
     }
 
+    /** Wrapper method for dumping more pages
+     */
     public void dumpPages(String filename, ArrayList<Page> pages){
         for (Page page : pages){
             dumpPage(page, filename);

@@ -1,5 +1,5 @@
 package mff.cuni.szczepaf;
 
 public interface IMediaEntity {
-    // Define common methods for media entities
+    // Common interface for all nodes in the abstract network of this project - meaning Films, Actors, Directors, Ratings, Pages...
 }

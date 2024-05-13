@@ -9,6 +9,7 @@ public class PageDownloader implements IDownloader{
 
 
     private int timeout;
+    // time between individual calls in seconds
     private static final String URL_SEARCH_RESULTS_PREFIX = "https://www.csfd.cz/podrobne-vyhledavani/?page=PAGENUMBER&searchParams=";
 
     public PageDownloader(int timeout) {
@@ -23,7 +24,13 @@ public class PageDownloader implements IDownloader{
     public String downloadByID(String url){
         return null;
     }
+    // not used as there is no page ID.
 
+    /**
+     * Downloads the HTML source based on the URL of the results of a search on CSFD. Goes through pages one by one until there are no more results.
+     * @param searchParams the suffix of the search page (the part after searchParams=). An example of such a string: https://www.csfd.cz/podrobne-vyhledavani/?sort=rating_average&searchParams=rlW0rKOyVwcoZS0fVzqyoaWyVwc7VwRvBygqYPVlVwcoKFjvZlV6J10fVwDvBygqYPW0rKOyVwblsFjvo3WcM2yhVwc7VwRvBygqYPVlVwcoKFjvZlV6JmRfZGx3KFjvAPV6J10fVaE5pTHvBwA9YPW5MJSlK2Mlo20vBz51oTjfVayyLKWsqT8vBz51oTjfVaWuqTyhM19zpz9gVwchqJkfYPWlLKEcozqsqT8vBz51oTjfVaEuMlV6J10fVzSwqT9lVwcoKFjvMTylMJA0o3VvBygqYPWwo21jo3AypvV6J10fVaAwpzIyoaqlnKEypvV6J10fVzS1qTuipvV6J10fVzAcozIgLKEiM3WupTuypvV6J10fVaOlo2E1L3Eco24vBygqYPWyMTy0VwcoKFjvp291ozDvBygqYPWmL2Iho2qlLKObrFV6J10fVz1up2fvBygqYPWwo3A0qJ1yplV6J10fVzAiozEcqTyioaZvBygqsD
+     * @return a contacted string with all the pages.
+     */
     @Override
     public String downloadByURL(String searchParams) {
         int pageIndex = 1;
@@ -60,6 +67,9 @@ public class PageDownloader implements IDownloader{
     }
 
 
+    /**
+     * Does the page have any more films?
+     */
     private boolean pageIsEmpty(String pageHTML) {
         Document document = Jsoup.parse(pageHTML);
         return document.select(".film-title-name").isEmpty();

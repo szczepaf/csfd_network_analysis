@@ -1,5 +1,5 @@
 package mff.cuni.szczepaf;
 @FunctionalInterface
-public interface FilmCondition {
+public interface NodeCondition {
     boolean meetsCondition(Film film);
 }

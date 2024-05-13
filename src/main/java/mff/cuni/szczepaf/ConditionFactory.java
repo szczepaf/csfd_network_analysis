@@ -3,11 +3,20 @@ package mff.cuni.szczepaf;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
+
+import java.util.HashSet;
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class ConditionFactory {
 
-    public static FilmCondition createConditionFromJson(String jsonCondition) {
+
+    /** Creates a NodeCondition used to decide which nodes shall be present in the Film Network.
+     * @param jsonCondition the condition represented as a String holding JSON-like conditions.
+     * @return The NodeCondition, a functional interface.
+     */
+    public static NodeCondition createNodeConditionFromJson(String jsonCondition) {
         try{
         JSONObject conditions = new JSONObject(jsonCondition);
         Predicate<Film> compositeCondition = film -> true;
@@ -47,7 +56,7 @@ public class ConditionFactory {
             JSONArray directorConditions = conditions.getJSONArray("directors");
             for (int i = 0; i < directorConditions.length(); i++) {
                 JSONObject directorCondition = directorConditions.getJSONObject(i);
-                compositeCondition = compositeCondition.and(parseActorCondition(directorCondition));
+                compositeCondition = compositeCondition.and(parseDirectorCondition(directorCondition));
             }
         }
 
@@ -55,13 +64,15 @@ public class ConditionFactory {
         return film -> finalCompositeCondition.test(film);
         }
         catch (JSONException e){
-            System.err.println("Invalid Exception! Check your string that is parsed into the exception.");
-            throw (e);
+            System.err.println("Invalid Condition! Check your node condition string.");
+            return null;
         }
     }
 
     private static Predicate<Film> parseDurationCondition(String condition) {
         String operator = condition.substring(0, 1);
+        try {
+
         int value = Integer.parseInt(condition.substring(1));
         switch (operator) {
             case "<":
@@ -70,18 +81,30 @@ public class ConditionFactory {
                 return film -> film.getDuration() > value;
             default:
                 throw new IllegalArgumentException("Unsupported operator for duration: " + operator);
+            }
         }
+        catch (NumberFormatException e){
+                System.err.println("Wrong Duration! Check your duration string.");
+                throw (e);
+            }
     }
 
     private static Predicate<Film> parseDateCreatedCondition(String condition) {
         String operator = condition.substring(0, 1);
-        int year = Integer.parseInt(condition.substring(1));
-        return switch (operator) {
-            case "=" -> film -> film.getDateCreated() == year;
-            case "<" -> film -> film.getDateCreated() < year;
-            case ">" -> film -> film.getDateCreated() > year;
-            default -> throw new IllegalArgumentException("Unsupported operator for dateCreated: " + operator);
-        };
+        try {
+            int year = Integer.parseInt(condition.substring(1));
+
+            return switch (operator) {
+                case "=" -> film -> film.getDateCreated() == year;
+                case "<" -> film -> film.getDateCreated() < year;
+                case ">" -> film -> film.getDateCreated() > year;
+                default -> throw new IllegalArgumentException("Unsupported operator for dateCreated: " + operator);
+            };
+        }
+        catch (NumberFormatException e){
+            System.err.println("Wrong Year! Check your year string.");
+            throw (e);
+        }
     }
 
     private static Predicate<Film> parseRatingCondition(String condition) {
@@ -113,7 +136,46 @@ public class ConditionFactory {
             String directorName = directorCondition.getString("notcontains");
             return film -> !film.getDirectorNames().contains(directorName);
         }
-        throw new IllegalArgumentException("Unsupported actor condition");
+        throw new IllegalArgumentException("Unsupported director condition");
     }
+
+    /**
+     * Equivalent of the factory function for Nodes, but for Edges.
+     */
+    public static EdgeCondition createEdgeConditionFromJson(String jsonCondition) {
+        try {
+            JSONObject conditions = new JSONObject(jsonCondition);
+            BiPredicate<Film, Film> compositeCondition = (f, g) -> true;
+
+            if (conditions.has("commonActors")) {
+                int n = conditions.getInt("commonActors");
+                compositeCondition = compositeCondition.and((f, g) -> {
+                    HashSet<String> film1Actors = new HashSet<>(f.getActorNames());
+                    HashSet<String> film2Actors = new HashSet<>(g.getActorNames());
+                    film1Actors.retainAll(film2Actors);  // Get the intersection of both sets
+                    return film1Actors.size() >= n;
+                });
+            }
+
+            if (conditions.has("commonDirector")) {
+                boolean commonDirectorRequired = conditions.getBoolean("commonDirector");
+                if (commonDirectorRequired) {
+                    compositeCondition = compositeCondition.and((f, g) -> {
+                        HashSet<String> film1Directors = new HashSet<>(f.getDirectorNames());
+                        HashSet<String> film2Directors = new HashSet<>(g.getDirectorNames());
+                        film1Directors.retainAll(film2Directors);
+                        return !film1Directors.isEmpty();
+                    });
+                }
+            }
+
+            BiPredicate<Film, Film> finalCompositeCondition = compositeCondition;
+            return (f, g) -> finalCompositeCondition.test(f, g);
+        } catch (JSONException e) {
+            System.err.println("Invalid Condition! Check your edge condition string.");
+            return null;
+        }
+    }
+
 }
 
