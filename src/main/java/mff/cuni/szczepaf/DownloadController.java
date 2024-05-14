@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import java.util.HashSet;
-public class Controller {
+public class DownloadController {
 
     /**
      * One of the main functions. It is used to retrieve all film links from given search parameters and store it in a specified file.

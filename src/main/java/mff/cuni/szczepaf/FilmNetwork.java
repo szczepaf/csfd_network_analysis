@@ -35,7 +35,7 @@ public class FilmNetwork implements INetwork {
      * @param condition condition to decide on the entry of each film.
      */
     @Override
-    public void loadNodes(String filename, NodeCondition condition) {
+    public Boolean loadNodes(String filename, NodeCondition condition) {
         FilmParser filmParser = new FilmParser();
         try (Stream<String> stream = Files.lines(Paths.get(filename))) {
             stream.forEach(line -> {
@@ -51,7 +51,9 @@ public class FilmNetwork implements INetwork {
             });
         } catch (Exception e) {
             System.err.println("Failed to read file: " + e.getMessage());
+            return false;
         }
+        return true;
     }
 
     public void printNodes(){
@@ -134,12 +136,15 @@ public class FilmNetwork implements INetwork {
         layout.setForce(0.5);  // Increase the repulsive force to spread nodes out more
         layout.setStabilizationLimit(0); // Stabilize more quickly, even if more imperfect
         viewer.enableAutoLayout(layout);
+
     }
     /**
-     * Exports the graph to a file using the GraphML format.
+     * Exports the graph to a file using the GraphML format. Always exports to the directory Exports.
+     * Uses the GraphML format - so give your files the extension .graphml
      * @param filename target file for export
      */
     public void export(String filename) {
+        String exportDirectory = "Exports/";
         Graph graph = new SingleGraph("Exported Film Network");
         populateGraph(graph);
 
@@ -147,7 +152,7 @@ public class FilmNetwork implements INetwork {
         FileSinkGraphML graphML = new FileSinkGraphML();
 
         try {
-            graphML.writeAll(graph, filename);
+            graphML.writeAll(graph, exportDirectory + filename);
             System.out.println("Graph exported successfully to " + filename);
         } catch (IOException e) {
             System.err.println("Failed to export graph: " + e.getMessage());
@@ -190,7 +195,7 @@ public class FilmNetwork implements INetwork {
     private String styleSheet() {
         return "node { " +
                 "   fill-color: black; " +
-                "   size: 30px, 30px; " +
+                "   size: 10px, 10px; " +
                 "   text-alignment: under; " +
                 "   text-color: darkblue; " +
                 "   text-size: 20px; " +
@@ -199,7 +204,7 @@ public class FilmNetwork implements INetwork {
                 "} " +
                 "edge { " +
                 "   fill-color: grey; " +
-                "   size: 3px; " +
+                "   size: 2px; " +
                 "}";
         }
     }
