@@ -7,9 +7,13 @@ import java.nio.file.Paths;
 
 import java.util.HashSet;
 public class DownloadController {
+    private static String filmLinksDir = "FilmLinks/";
+    private static String filmDataDir = "FilmData/";
+
 
     /**
      * One of the main functions. It is used to retrieve all film links from given search parameters and store it in a specified file.
+     * Always store the film links in the dir FilmLinks.
      * @param searchParams the suffix of the URL corresponding to search results in a CSFD detailed query.
      * @param timeout time between individual calls.
      * @param filename target filename to store the URLs in.
@@ -35,6 +39,7 @@ public class DownloadController {
 
     /**
      * Second main function. It fetches the Film URLs corresponding to a CSFD detailed query and downloads the film data. It stores them in a target file.
+     * Always store the links in the dir FilmLinks and the data in FilmData.
      * @param sourceFile file with the Film links.
      * @param targetFile file to store Film data in.
      * @param timeout time between individual calls.
@@ -44,7 +49,7 @@ public class DownloadController {
         HashSet<String> existingFilmIDs = new HashSet<>();
 
         try {
-            filmURLsToProcess = new ArrayList<>(Files.readAllLines(Paths.get(sourceFile)));
+            filmURLsToProcess = new ArrayList<>(Files.readAllLines(Paths.get(filmLinksDir + sourceFile)));
         } catch (IOException e) {
             System.err.println("Error reading source file: " + e.getMessage());
             return;
@@ -52,7 +57,7 @@ public class DownloadController {
 
         // Load existing film IDs from the target file
         try {
-            ArrayList<String> existingLines = (ArrayList<String>) Files.readAllLines(Paths.get(targetFile));
+            ArrayList<String> existingLines = (ArrayList<String>) Files.readAllLines(Paths.get(filmDataDir + targetFile));
             for (String line : existingLines) {
                 if (line.contains(":")) {  // All lines should start with the ID of the movie - see PageParser class.
                     String id = line.substring(0, line.indexOf(':'));
@@ -87,7 +92,7 @@ public class DownloadController {
             Film film = filmParser.parse(filmString);
             if (film != null) {
                 String filmID = filmParser.extractFilmIDFromURL(url);
-                filmParser.dumpFilm(film, targetFile, filmID);
+                filmParser.dumpFilm(film, filmDataDir + targetFile, filmID);
             }
             else {
                 System.err.println("Something went wrong when downloading from URL: " + url);
