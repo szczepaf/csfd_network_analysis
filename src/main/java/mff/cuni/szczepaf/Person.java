@@ -1,5 +1,9 @@
 package mff.cuni.szczepaf;
 
+/**
+ * One of the implementations of IMediaEntity. It represents any Person associated with some Media.
+ * That can be an Actor, Director (as it is currently), but can be extended by other professions in the future.
+ */
 public class Person implements IMediaEntity{
 
     public Person(String name) {
@@ -10,28 +14,27 @@ public class Person implements IMediaEntity{
         return name;
     }
 
+    /**
+     * By "name" we mean the first name and surname of a person.
+     */
     private String name;
-    // The Firstname and Surname of a Person.
 
-
-    @Override
-    public int hashCode() {
-        // Hash the name, if it is null, return some constant, e.g. 0
-        return name != null ? name.hashCode() : 0;
-    }
-
+    /**
+     * Let's assume that two people are identical if they share the same name.
+     * CSFD is strict about having differences in names for different actors (distinguishing them e.g. by suffixes like "sr.", "jr.", etc.)
+     */
     @Override
     public boolean equals(Object obj) {
-        // Let's assume that two people are identical if they share the same name.
-        // That is of course not ideal, but at the same time, CSFD is strict about having differences in names for different actors.
-        // Let's rely on them to be consistent.
 
         if (obj == this) return true;
 
         if (obj == null || obj.getClass() != this.getClass()) return false;
-
-
         Person person = (Person) obj;
         return name.equals(person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name != null ? name.hashCode() : 0;
     }
 }

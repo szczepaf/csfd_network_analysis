@@ -1,10 +1,10 @@
 package mff.cuni.szczepaf;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.stream.Stream;
 
 import org.graphstream.graph.Graph;
@@ -14,6 +14,16 @@ import org.graphstream.stream.file.FileSinkGraphML;
 import org.graphstream.ui.layout.springbox.implementations.SpringBox;
 import org.graphstream.ui.view.Viewer;
 
+/**
+ * The class representing a Graph~Network of Films.
+ * Nodes will only be added if they fulfill a node condition (e.g. have a high-enough rating, are not longer than 100 minutes, etc.).
+ * Edges will only be created between two Films if they fulfill an edge condition (e.g. they share the director, share N actors, etc.)
+ * Apart from the creation of the Film Network, two other methods are crucial:
+ * 1) visualize: uses the graphstream library to plot the graph.
+ * I find this Java library clumsy in comparsion to Python's matplotlib and NetworkX, but:
+ * 2) there is an easy method to export the graph to Python, using the function export.
+ * It dumps out the nodes and edges to a specified file using the GraphML format.
+ */
 public class FilmNetwork implements INetwork {
 
 
@@ -34,6 +44,7 @@ public class FilmNetwork implements INetwork {
      * Always lode from the directory "FilmData"
      * @param filename source filename with the Film Data.
      * @param condition condition to decide on the entry of each film.
+     * @return true if all is parsed correctly, false if some problem occurs.
      */
     @Override
     public Boolean loadNodes(String filename, NodeCondition condition) {
@@ -51,7 +62,7 @@ public class FilmNetwork implements INetwork {
                     System.err.println("Failed to parse film: " + e.getMessage());
                 }
             });
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.err.println("Failed to read file: " + e.getMessage());
             return false;
         }
@@ -132,7 +143,7 @@ public class FilmNetwork implements INetwork {
 
         // Configure the layout
         layout.setForce(0.5);  // Increase the repulsive force to spread nodes out more
-        layout.setStabilizationLimit(0); // Stabilize more quickly, even if more imperfect
+        layout.setStabilizationLimit(0); // Stabilize more quickly, even if it is imperfect
         viewer.enableAutoLayout(layout);
 
     }
@@ -190,6 +201,9 @@ public class FilmNetwork implements INetwork {
         }
     }
 
+    /**
+     * Stylesheet for the graph. Feel free to change color of fonts, sizes, etc.
+     */
     private String styleSheet() {
         return "node { " +
                 "   fill-color: black; " +

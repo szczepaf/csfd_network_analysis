@@ -5,6 +5,15 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+/**
+ * Class that downloads the data of a detailed query on the CSFD portal.
+ * It returns a long string with the HTML content, which is then used by the PageParser class.
+ * This is the place to perform the detailed queries in CSFD:
+ *<a href="https://www.csfd.cz/podrobne-vyhledavani/">https://www.csfd.cz/podrobne-vyhledavani/</a>
+ */
+
+
 public class PageDownloader implements IDownloader{
 
 
@@ -28,8 +37,11 @@ public class PageDownloader implements IDownloader{
 
     /**
      * Downloads the HTML source based on the URL of the results of a search on CSFD. Goes through pages one by one until there are no more results.
-     * @param searchParams the suffix of the search page (the part after searchParams=). An example of such a string: https://www.csfd.cz/podrobne-vyhledavani/?sort=rating_average&searchParams=rlW0rKOyVwcoZS0fVzqyoaWyVwc7VwRvBygqYPVlVwcoKFjvZlV6J10fVwDvBygqYPW0rKOyVwblsFjvo3WcM2yhVwc7VwRvBygqYPVlVwcoKFjvZlV6JmRfZGx3KFjvAPV6J10fVaE5pTHvBwA9YPW5MJSlK2Mlo20vBz51oTjfVayyLKWsqT8vBz51oTjfVaWuqTyhM19zpz9gVwchqJkfYPWlLKEcozqsqT8vBz51oTjfVaEuMlV6J10fVzSwqT9lVwcoKFjvMTylMJA0o3VvBygqYPWwo21jo3AypvV6J10fVaAwpzIyoaqlnKEypvV6J10fVzS1qTuipvV6J10fVzAcozIgLKEiM3WupTuypvV6J10fVaOlo2E1L3Eco24vBygqYPWyMTy0VwcoKFjvp291ozDvBygqYPWmL2Iho2qlLKObrFV6J10fVz1up2fvBygqYPWwo3A0qJ1yplV6J10fVzAiozEcqTyioaZvBygqsD
-     * @return a contacted string with all the pages.
+     * @param searchParams the suffix of the search page (the part after searchParams=).
+     * An example of such a string
+     * (you should cut out everything before "searchParams="):
+     * https://www.csfd.cz/podrobne-vyhledavani/?sort=rating_average&searchParams=rlW0rKOyVwcoZS0fVzqyoaWyVwc7VwRvBygqYPVlVwcoKFjvZlV6J10fVwDvBygqYPW0rKOyVwblsFjvo3WcM2yhVwc7VwRvBygqYPVlVwcoKFjvZlV6JmRfZGx3KFjvAPV6J10fVaE5pTHvBwA9YPW5MJSlK2Mlo20vBz51oTjfVayyLKWsqT8vBz51oTjfVaWuqTyhM19zpz9gVwchqJkfYPWlLKEcozqsqT8vBz51oTjfVaEuMlV6J10fVzSwqT9lVwcoKFjvMTylMJA0o3VvBygqYPWwo21jo3AypvV6J10fVaAwpzIyoaqlnKEypvV6J10fVzS1qTuipvV6J10fVzAcozIgLKEiM3WupTuypvV6J10fVaOlo2E1L3Eco24vBygqYPWyMTy0VwcoKFjvp291ozDvBygqYPWmL2Iho2qlLKObrFV6J10fVz1up2fvBygqYPWwo3A0qJ1yplV6J10fVzAiozEcqTyioaZvBygqsD
+     * @return a long string with all the pages.
      */
     @Override
     public String downloadByURL(String searchParams) {
@@ -68,7 +80,7 @@ public class PageDownloader implements IDownloader{
 
 
     /**
-     * Does the page have any more films?
+     * Decides whether the page has any more films, or is it the page after the last page of the results?
      */
     private boolean pageIsEmpty(String pageHTML) {
         Document document = Jsoup.parse(pageHTML);

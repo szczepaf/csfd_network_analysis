@@ -32,9 +32,15 @@ public class DownloadController {
 
         PageParser pageParser = new PageParser();
         ArrayList<Page> parsedPages = pageParser.parsePages(pagesInAString);
-        pageParser.dumpPages(filename, parsedPages);
+        if (parsedPages == null){
+            System.out.println("Unable to fetch any Film Links from the Search Params! See the user documentation.");
+        }
+        else {
 
-        System.out.println("Pages parsed and dumped.");
+
+            pageParser.dumpPages(filmLinksDir + filename, parsedPages);
+            System.out.println("Pages parsed and dumped.");
+        }
     }
 
     /**
@@ -45,7 +51,14 @@ public class DownloadController {
      * @param timeout time between individual calls.
      */
     public static void downloadFilmsFromLinks(String sourceFile, String targetFile, int timeout) {
-        ArrayList<String> filmURLsToProcess;
+
+        if(!Files.exists(Paths.get(filmLinksDir + sourceFile))) {
+            System.out.println("Source file does not exist!. Try again.");
+            return;
+        }
+
+
+            ArrayList<String> filmURLsToProcess;
         HashSet<String> existingFilmIDs = new HashSet<>();
 
         try {
@@ -55,7 +68,9 @@ public class DownloadController {
             return;
         }
 
-        // Load existing film IDs from the target file
+
+        // Load existing film IDs from the target file, if it already exists - so that progress is always stored.
+        if (Files.exists(Paths.get(filmDataDir + targetFile))) {
         try {
             ArrayList<String> existingLines = (ArrayList<String>) Files.readAllLines(Paths.get(filmDataDir + targetFile));
             for (String line : existingLines) {
@@ -66,6 +81,7 @@ public class DownloadController {
             }
         } catch (IOException e) {
             System.err.println("Error reading target file: " + e.getMessage());
+             }
         }
 
         // Extract film IDs from URLs

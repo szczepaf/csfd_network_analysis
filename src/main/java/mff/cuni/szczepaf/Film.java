@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * A class representing one Film from the CSFD portal.
+ * It holds information about the film such as its length, rating, etc., but also will serve as a node in the Film Graph.
+ */
 public class Film implements IMediaEntity {
     private int duration;
     // Duration of the film in minutes
@@ -69,6 +73,10 @@ public class Film implements IMediaEntity {
         return rating;
     }
 
+    /**
+     * Lets say two Films are equal if they have the same Name, the same Duration, Director and Date Created.
+     * It is very unlikely to impossible two Film would have the same values of these films but would not be the same Film.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -84,6 +92,14 @@ public class Film implements IMediaEntity {
     public int hashCode() {
         return Objects.hash(duration, name, dateCreated, directors);
     }
+
+    /**
+     * Use a format that will be:
+     * 1) Legible
+     * 2) Easily loadable in the future
+     *
+     * @return a string representation of the Film.
+     */
     @Override
     public String toString() {
         StringBuilder filmString = new StringBuilder();

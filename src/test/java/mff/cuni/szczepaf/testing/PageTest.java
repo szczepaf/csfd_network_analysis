@@ -144,7 +144,7 @@ public class PageTest {
         Page page = parser.parse(onePageStr);
 
         // Again, the page will change in time. Lets at least check that it contains some of the current films.
-        ArrayList<String> movieURLs = page.getMovieURLs();
+        ArrayList<String> movieURLs = page.getMediaURLs();
         assertTrue(movieURLs.contains("https://www.csfd.cz//film/790917-1989-z-dopisu-psanych-pres-zeleznou-oponu/"), "Page parsing does not work correctly!");
         assertTrue(movieURLs.contains("https://www.csfd.cz//film/1502431-expedice-repti-planet-arizonske-dobrodruzstvi/"), "Page parsing does not work correctly!");
         assertTrue(movieURLs.contains("https://www.csfd.cz//film/475131-znameni-krize/"), "Page parsing does not work correctly!");

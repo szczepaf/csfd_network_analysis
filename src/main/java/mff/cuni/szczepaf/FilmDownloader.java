@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * FilmDownloader is a class that downloads film information from a given URL.
+ * Its information is then sent to the FilmParser class, which turns it into a Film.
  */
 public class FilmDownloader implements IDownloader {
 
@@ -18,8 +19,10 @@ public class FilmDownloader implements IDownloader {
         this.timeout = 30;
     }
 
-    private int timeout;
-    // Timeout in seconds between individual calls. Default = 30 seconds.
+    private int timeout;    // Timeout in seconds between individual calls. Default = 30 seconds.
+
+    static String structureURLIDPrefix = "https://www.csfd.cz/film/";
+
 
     /**
      * Downloads film data in JSON format from the specified URL of a CSFD movie.
@@ -28,7 +31,6 @@ public class FilmDownloader implements IDownloader {
      * @return A String containing the JSON data of the film. Null if the data is not found.
      */
 
-    static String structureURLIDPrefix = "https://www.csfd.cz/film/";
     public String downloadByURL(String url) {
         try {
             Document doc = Jsoup.connect(url).get();

@@ -1,5 +1,10 @@
 package mff.cuni.szczepaf;
 
+/**
+ * An edge in the FilmNetwork is two Films.
+ * They will most often be connected only if they meet a certain condition
+ * e.g. share at least 2 actors
+ */
 public class Edge {
     private Film film1;
     private Film film2;

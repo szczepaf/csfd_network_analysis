@@ -3,6 +3,9 @@ package mff.cuni.szczepaf;
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * The film network that will be created, visualized, exported...
+     */
     private static FilmNetwork network;
     private static Scanner scanner;
 
@@ -12,7 +15,7 @@ public class Main {
         scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Film Network CLI."); // TODO Make this more fancy
-        // printHelp();
+        printHelp();
 
         String command = "";
         while (true) {
@@ -48,6 +51,10 @@ public class Main {
         }
     }
 
+    /**
+     *
+     */
+
     private static void loadNodes() {
         System.out.print("Enter JSON string for node condition: ");
         String conditionJSONString = scanner.nextLine().trim();
@@ -80,11 +87,7 @@ public class Main {
         System.out.print("Enter search parameters: ");
         String searchParams = scanner.nextLine().trim();
 
-        System.out.print("Enter timeout between calls in seconds. (Longer is safer. Press enter for default: 30 seconds.)");
-        String timeoutString = scanner.nextLine().trim();
-        int timeout = 30;
-        if (!timeoutString.isEmpty()) timeout = Integer.parseInt(timeoutString);
-        System.out.println("Timeout is set to " + timeout);
+        int timeout = getValidTimeout();
 
         System.out.print("Enter target filename for saving film links: ");
         String filename = scanner.nextLine().trim();
@@ -99,26 +102,41 @@ public class Main {
         System.out.print("Enter target filename for saving film data: ");
         String targetFile = scanner.nextLine().trim();
 
-        System.out.print("Enter timeout between calls in seconds. (Longer is safer. Press enter for default: 30 seconds.)");
-        String timeoutString = scanner.nextLine().trim();
-        int timeout = 30;
-        if (!timeoutString.isEmpty()) timeout = Integer.parseInt(timeoutString);
-        System.out.println("Timeout is set to " + timeout);
+        int timeout = getValidTimeout();
 
         DownloadController.downloadFilmsFromLinks(sourceFile, targetFile, timeout);
     }
 
     private static void printHelp() {
         System.out.println("Available commands:");
-        System.out.println("  load nodes/l    - Load nodes from a file with a condition on nodes");
-        System.out.println("  create edges/c  - Create edges based on a condition for tuples of films");
-        System.out.println("  visualize/v     - Visualize the current graph using graphstream");
-        System.out.println("  export/x        - Export the graph to a GraphML file");
-        System.out.println("  fetch links/f        - Fetch film links from search parameters");
-        System.out.println("  download films/d     - Download film data from links");
-        System.out.println("  help/h          - Print this help message");
-        System.out.println("  exit/e          - Exit the program");
+        System.out.println("  load nodes/l     - Load nodes from a file with a condition on nodes");
+        System.out.println("  create edges/c   - Create edges based on a condition for tuples of films");
+        System.out.println("  visualize/v      - Visualize the current graph using graphstream");
+        System.out.println("  export/x         - Export the graph to a GraphML file");
+        System.out.println("  fetch links/f    - Fetch film links from search parameters");
+        System.out.println("  download films/d - Download film data from links");
+        System.out.println("  help/h           - Print this help message");
+        System.out.println("  exit/e           - Exit the program");
 
+    }
+
+    private static int getValidTimeout() {
+        int timeout = 30; // default value
+        while (true) {
+            System.out.print("Enter timeout between calls in seconds. (Longer is safer. Press enter for default: 30 seconds.)");
+            String timeoutString = scanner.nextLine().trim();
+            if (timeoutString.isEmpty()) {
+                break;
+            }
+            try {
+                timeout = Integer.parseInt(timeoutString);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+        System.out.println("Timeout is set to " + timeout);
+        return timeout;
     }
 
 }

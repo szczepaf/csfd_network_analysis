@@ -1,5 +1,7 @@
 package mff.cuni.szczepaf;
 
+/**
+ * Common interface for all elements of this project - meaning Films, Actors, Directors, Ratings, Pages...
+ */
 public interface IMediaEntity {
-    // Common interface for all nodes in the abstract network of this project - meaning Films, Actors, Directors, Ratings, Pages...
 }

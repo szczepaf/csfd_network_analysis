@@ -10,12 +10,17 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Class that receives data from PageDownloader and turns it into pages with Media URLs.
+ * It can also dump the pages into files.
+ */
+
 public class PageParser implements IParser {
 
-    public static final String FILM_URL_PREFIX = "https://www.csfd.cz/";
+    private static final String FILM_URL_PREFIX = "https://www.csfd.cz/";
 
     /**
-     * Just splits the long String from page downloader into individual pages.
+     * Splits the long String from page downloader into individual pages.
      * @param concatenatedPages the long string with all the pages.
      * @return pages as strings.
      */
@@ -66,6 +71,8 @@ public class PageParser implements IParser {
      * @return a list of Pages.
      */
     public ArrayList<Page> parsePages(String concatenatedPages){
+        if (concatenatedPages.isEmpty()) return null;
+
         ArrayList<String> pageStrings = splitPages(concatenatedPages);
         ArrayList<Page> pages = new ArrayList<Page>();
         for (String pageString : pageStrings){
@@ -84,7 +91,7 @@ public class PageParser implements IParser {
      */
     public void dumpPage(Page page, String filename) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
-            ArrayList<String> urls = page.getMovieURLs();
+            ArrayList<String> urls = page.getMediaURLs();
             for (String url : urls) {
                 writer.write(url);
                 writer.newLine();
@@ -94,7 +101,8 @@ public class PageParser implements IParser {
         }
     }
 
-    /** Wrapper method for dumping more pages
+    /**
+     * Wrapper method for dumping more pages
      */
     public void dumpPages(String filename, ArrayList<Page> pages){
         for (Page page : pages){

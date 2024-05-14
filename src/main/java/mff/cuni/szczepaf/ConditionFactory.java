@@ -9,6 +9,16 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+/**
+ * A class that will provide conditions to filter nodes and create edges.
+ * One method creates conditions for Nodes
+ * - a condition that will decide for each film, whether it fits or not and should or should not be included in the network.
+ *
+ * The second method works similarly, but for edges - tuples of Films.
+ *
+ * See the user guide for help on how to write these conditions.
+ * The conditions themselves are using Functional Interfaces.
+ */
 public class ConditionFactory {
 
 

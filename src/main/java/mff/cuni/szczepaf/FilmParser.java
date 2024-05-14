@@ -9,6 +9,10 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Class that receives the Film Data from the FilmDownloader class and parses it into a Film Object.
+ * Also provides a method for a Film to be dumped into a File (and a method that in turn reads that dump).
+ */
 public class FilmParser implements IParser {
 
     /**
