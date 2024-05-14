@@ -31,13 +31,15 @@ public class FilmNetwork implements INetwork {
 
     /**
      * Based on the NodeCondition provided by the ConditionFactory, load Films~Nodes from a source filename into the graph.
+     * Always lode from the directory "FilmData"
      * @param filename source filename with the Film Data.
      * @param condition condition to decide on the entry of each film.
      */
     @Override
-    public void loadNodes(String filename, NodeCondition condition) {
+    public Boolean loadNodes(String filename, NodeCondition condition) {
         FilmParser filmParser = new FilmParser();
-        try (Stream<String> stream = Files.lines(Paths.get(filename))) {
+        String filmDataDirectory = "FilmData/";
+        try (Stream<String> stream = Files.lines(Paths.get(filmDataDirectory + filename))) {
             stream.forEach(line -> {
                 try {
                     String jsonPart = line.split(":", 2)[1].trim(); // example line: 341532: {"name": "Láska, soudruhu", "duration": 101, "dateCreated": 2013, "directors": ["Taru Mäkelä"], "actors": ["Kati Outinen", "Miroslav Etzler", "Elena Leeve", "Kryštof Hádek", "Esko Salminen", "Laura Birn", "Vesa Vierikko", "Tommi Korpela", "Denny Ratajský", "Petr Stach"], "rating": 55.33869}
@@ -51,7 +53,9 @@ public class FilmNetwork implements INetwork {
             });
         } catch (Exception e) {
             System.err.println("Failed to read file: " + e.getMessage());
+            return false;
         }
+        return true;
     }
 
     public void printNodes(){
@@ -97,8 +101,6 @@ public class FilmNetwork implements INetwork {
         Graph graph = new SingleGraph("Film Network");
         graph.setAttribute("ui.stylesheet", styleSheet());
 
-        // Track which nodes are connected
-        HashSet<String> connectedNodes = new HashSet<>();
         SpringBox layout = new SpringBox();
 
 
@@ -106,8 +108,6 @@ public class FilmNetwork implements INetwork {
         for (Edge edge : edges) {
             String sourceId = edge.getFilm1().getName() + "_" + edge.getFilm1().getDateCreated();
             String targetId = edge.getFilm2().getName() + "_" + edge.getFilm2().getDateCreated();
-            connectedNodes.add(sourceId);
-            connectedNodes.add(targetId);
 
             // add Film names and dateCreated as labels. Lower the weight so that there is more space around each node.
             if (graph.getNode(sourceId) == null) {
@@ -134,12 +134,15 @@ public class FilmNetwork implements INetwork {
         layout.setForce(0.5);  // Increase the repulsive force to spread nodes out more
         layout.setStabilizationLimit(0); // Stabilize more quickly, even if more imperfect
         viewer.enableAutoLayout(layout);
+
     }
     /**
-     * Exports the graph to a file using the GraphML format.
+     * Exports the graph to a file using the GraphML format. Always exports to the directory Exports.
+     * Uses the GraphML format - so give your files the extension .graphml
      * @param filename target file for export
      */
     public void export(String filename) {
+        String exportDirectory = "Exports/";
         Graph graph = new SingleGraph("Exported Film Network");
         populateGraph(graph);
 
@@ -147,7 +150,7 @@ public class FilmNetwork implements INetwork {
         FileSinkGraphML graphML = new FileSinkGraphML();
 
         try {
-            graphML.writeAll(graph, filename);
+            graphML.writeAll(graph, exportDirectory + filename);
             System.out.println("Graph exported successfully to " + filename);
         } catch (IOException e) {
             System.err.println("Failed to export graph: " + e.getMessage());
@@ -190,7 +193,7 @@ public class FilmNetwork implements INetwork {
     private String styleSheet() {
         return "node { " +
                 "   fill-color: black; " +
-                "   size: 30px, 30px; " +
+                "   size: 10px, 10px; " +
                 "   text-alignment: under; " +
                 "   text-color: darkblue; " +
                 "   text-size: 20px; " +
@@ -199,7 +202,7 @@ public class FilmNetwork implements INetwork {
                 "} " +
                 "edge { " +
                 "   fill-color: grey; " +
-                "   size: 3px; " +
+                "   size: 2px; " +
                 "}";
         }
     }

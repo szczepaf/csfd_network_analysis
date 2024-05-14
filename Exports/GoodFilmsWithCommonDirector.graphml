@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+	   http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+	<key id="attr0000" for="node" attr.name="duration" attr.type="int"/>
+	<key id="attr0001" for="node" attr.name="actors" attr.type="string"/>
+	<key id="attr0002" for="node" attr.name="dateCreated" attr.type="int"/>
+	<key id="attr0003" for="node" attr.name="directors" attr.type="string"/>
+	<key id="attr0004" for="node" attr.name="name" attr.type="string"/>
+	<key id="attr0005" for="node" attr.name="rating" attr.type="float"/>
+	<key id="attr0006" for="node" attr.name="ui.label" attr.type="string"/>
+	<graph id="Exported Film Network" edgedefault="undirected">
+		<node id="Pelíšky_1999">
+			<data key="attr0000">116</data>
+			<data key="attr0001">Miroslav Donutil, Jiří Kodet, Simona Stašová, Emília Vášáryová, Bolek Polívka, Jaroslav Dušek, Eva Holubová, Stella Zázvorková, Kristýna Badinková Nováková, Michael Beran</data>
+			<data key="attr0002">1999</data>
+			<data key="attr0003">Jan Hřebejk</data>
+			<data key="attr0004">Pelíšky</data>
+			<data key="attr0005">91.18537</data>
+			<data key="attr0006">Pelíšky (1999)</data>
+		</node>
+		<node id="Pásky z Nagana_2018">
+			<data key="attr0000">73</data>
+			<data key="attr0001">Dominik Hašek, Jaromír Jágr, Petr Svoboda, Robert Záruba, Ivan Hlinka, Slavomír Lener, Michael Žantovský, Roman Hamrlík, Martin Straka, Giancarlo Esposito</data>
+			<data key="attr0002">2018</data>
+			<data key="attr0003">Ondřej Hudeček</data>
+			<data key="attr0004">Pásky z Nagana</data>
+			<data key="attr0005">94.992195</data>
+			<data key="attr0006">Pásky z Nagana (2018)</data>
+		</node>
+		<node id="Nagano 1998 - hokejový turnaj století_1998">
+			<data key="attr0000">90</data>
+			<data key="attr0001">Jaromír Jágr, Dominik Hašek, Ivan Hlinka, Martin Procházka, Robert Reichel, Jiří Šlégr, Vladimír Růžička, Pavel Patera, Jiří Dopita, Robert Lang</data>
+			<data key="attr0002">1998</data>
+			<data key="attr0003">Jiří Slezák, Charilaos Karadžos</data>
+			<data key="attr0004">Nagano 1998 - hokejový turnaj století</data>
+			<data key="attr0005">93.486725</data>
+			<data key="attr0006">Nagano 1998 - hokejový turnaj století (1998)</data>
+		</node>
+		<node id="Až opadá listí z dubu_1991">
+			<data key="attr0000">26</data>
+			<data key="attr0001">Jan Werich</data>
+			<data key="attr0002">1991</data>
+			<data key="attr0003">Vlasta Pospíšilová</data>
+			<data key="attr0004">Až opadá listí z dubu</data>
+			<data key="attr0005">92.568474</data>
+			<data key="attr0006">Až opadá listí z dubu (1991)</data>
+		</node>
+		<node id="Klíč k určování trpaslíků podle deníku Pavla Juráčka_2002">
+			<data key="attr0000">58</data>
+			<data key="attr0001">Marek Juráček, Edita Levá</data>
+			<data key="attr0002">2002</data>
+			<data key="attr0003">Martin Šulík</data>
+			<data key="attr0004">Klíč k určování trpaslíků podle deníku Pavla Juráčka</data>
+			<data key="attr0005">91.11688</data>
+			<data key="attr0006">Klíč k určování trpaslíků podle deníku Pavla Juráčka (2002)</data>
+		</node>
+		<node id="Návrat mistrů_2005">
+			<data key="attr0000">58</data>
+			<data key="attr0001">Jaromír Jágr, Jiří Šlégr, František Kaberle, Jaroslav Špaček, Vladimír Růžička, Martin Straka, David Výborný, Petr Čajánek, Milan Hnilička, Alexandr Ovečkin</data>
+			<data key="attr0002">2005</data>
+			<data key="attr0003">Karel Jonák</data>
+			<data key="attr0004">Návrat mistrů</data>
+			<data key="attr0005">93.54597</data>
+			<data key="attr0006">Návrat mistrů (2005)</data>
+		</node>
+		<node id="Zlatý hattrick_2001">
+			<data key="attr0000">0</data>
+			<data key="attr0001">Martin Procházka, František Kaberle, Robert Reichel, Pavel Patera, David Výborný, Milan Hnilička, David Moravec, Petr Čajánek, Jiří Dopita, Viktor Ujčík</data>
+			<data key="attr0002">2001</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Zlatý hattrick</data>
+			<data key="attr0005">95.90674</data>
+			<data key="attr0006">Zlatý hattrick (2001)</data>
+		</node>
+		<node id="Hokej v srdci_2003">
+			<data key="attr0000">58</data>
+			<data key="attr0001">Robert Záruba</data>
+			<data key="attr0002">2003</data>
+			<data key="attr0003">Charilaos Karadžos</data>
+			<data key="attr0004">Hokej v srdci</data>
+			<data key="attr0005">92.901024</data>
+			<data key="attr0006">Hokej v srdci (2003)</data>
+		</node>
+		<node id="Nepřítelem osudu_2008">
+			<data key="attr0000">34</data>
+			<data key="attr0001">Zdeněk Svěrák</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Ondřej Krejcar</data>
+			<data key="attr0004">Nepřítelem osudu</data>
+			<data key="attr0005">90.652176</data>
+			<data key="attr0006">Nepřítelem osudu (2008)</data>
+		</node>
+		<node id="Jste slabší, máte padáka_2002">
+			<data key="attr0000">8</data>
+			<data key="attr0001">Oldřich Kaiser, Jiří Lábus, Jiřina Bohdalová</data>
+			<data key="attr0002">2002</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Jste slabší, máte padáka</data>
+			<data key="attr0005">92.92683</data>
+			<data key="attr0006">Jste slabší, máte padáka (2002)</data>
+		</node>
+		<node id="Tri sestry: Best off video_2010">
+			<data key="attr0000">0</data>
+			<data key="attr0001">Lou Fanánek Hagen, Tomáš Doležal</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Tri sestry: Best off video</data>
+			<data key="attr0005">92.89474</data>
+			<data key="attr0006">Tri sestry: Best off video (2010)</data>
+		</node>
+		<node id="Karel Kryl : Koncerty 1989 /1990_2011">
+			<data key="attr0000">0</data>
+			<data key="attr0001">Karel Kryl</data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Karel Kryl : Koncerty 1989 /1990</data>
+			<data key="attr0005">93.21429</data>
+			<data key="attr0006">Karel Kryl : Koncerty 1989 /1990 (2011)</data>
+		</node>
+		<node id="Od palice k vrtu_2018">
+			<data key="attr0000">31</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2018</data>
+			<data key="attr0003">Jan Šimánek</data>
+			<data key="attr0004">Od palice k vrtu</data>
+			<data key="attr0005">93.21429</data>
+			<data key="attr0006">Od palice k vrtu (2018)</data>
+		</node>
+		<node id="Hana Hegerová - Pasiáns_2011">
+			<data key="attr0000">146</data>
+			<data key="attr0001">Hana Hegerová</data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Hana Hegerová - Pasiáns</data>
+			<data key="attr0005">92.34042</data>
+			<data key="attr0006">Hana Hegerová - Pasiáns (2011)</data>
+		</node>
+		<node id="Ten, co slaví každý den_2024">
+			<data key="attr0000">65</data>
+			<data key="attr0001">Michal Maroši, Tomáš Slavík, Eva Adamczyková</data>
+			<data key="attr0002">2024</data>
+			<data key="attr0003">Martin Vrbický</data>
+			<data key="attr0004">Ten, co slaví každý den</data>
+			<data key="attr0005">92.0</data>
+			<data key="attr0006">Ten, co slaví každý den (2024)</data>
+		</node>
+		<node id="Paradox: A Rusty Lake Film_2018">
+			<data key="attr0000">19</data>
+			<data key="attr0001">David Bowles</data>
+			<data key="attr0002">2018</data>
+			<data key="attr0003">Sean van Leijenhorst</data>
+			<data key="attr0004">Paradox: A Rusty Lake Film</data>
+			<data key="attr0005">90.90909</data>
+			<data key="attr0006">Paradox: A Rusty Lake Film (2018)</data>
+		</node>
+		<node id="Les Svíb_2012">
+			<data key="attr0000">6</data>
+			<data key="attr0001">Martin Šesták, Radek Balcárek</data>
+			<data key="attr0002">2012</data>
+			<data key="attr0003">Ondřej Hejna</data>
+			<data key="attr0004">Les Svíb</data>
+			<data key="attr0005">91.0</data>
+			<data key="attr0006">Les Svíb (2012)</data>
+		</node>
+		<node id="Srdce v hokeji_2003">
+			<data key="attr0000">58</data>
+			<data key="attr0001">Robert Záruba</data>
+			<data key="attr0002">2003</data>
+			<data key="attr0003">Charilaos Karadžos</data>
+			<data key="attr0004">Srdce v hokeji</data>
+			<data key="attr0005">91.052635</data>
+			<data key="attr0006">Srdce v hokeji (2003)</data>
+		</node>
+		<node id="Cool Boy!_2023">
+			<data key="attr0000">0</data>
+			<data key="attr0001">Adam Lysek, Dušan Brachna, Petr Brunner</data>
+			<data key="attr0002">2023</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Cool Boy!</data>
+			<data key="attr0005">92.94118</data>
+			<data key="attr0006">Cool Boy! (2023)</data>
+		</node>
+		<node id="Death or Glory: The Atlantic ocean_2015">
+			<data key="attr0000">41</data>
+			<data key="attr0001">Martin Doleček, Josef Prokop</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Josef Prokop</data>
+			<data key="attr0004">Death or Glory: The Atlantic ocean</data>
+			<data key="attr0005">95.757576</data>
+			<data key="attr0006">Death or Glory: The Atlantic ocean (2015)</data>
+		</node>
+		<node id="Zde jsou sloni_2012">
+			<data key="attr0000">0</data>
+			<data key="attr0001">Arthur F. Sniegon</data>
+			<data key="attr0002">2012</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Zde jsou sloni</data>
+			<data key="attr0005">94.28571</data>
+			<data key="attr0006">Zde jsou sloni (2012)</data>
+		</node>
+		<node id="Příběhy obrazů a soch_1999">
+			<data key="attr0000">0</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">1999</data>
+			<data key="attr0003">Aleš Kisil</data>
+			<data key="attr0004">Příběhy obrazů a soch</data>
+			<data key="attr0005">94.61539</data>
+			<data key="attr0006">Příběhy obrazů a soch (1999)</data>
+		</node>
+		<node id="Making of Blackhole_2017">
+			<data key="attr0000">68</data>
+			<data key="attr0001">Filip Kraucher</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Filip Kraucher</data>
+			<data key="attr0004">Making of Blackhole</data>
+			<data key="attr0005">92.5</data>
+			<data key="attr0006">Making of Blackhole (2017)</data>
+		</node>
+		<node id="1989: Z dopisů psaných přes železnou oponu_2019">
+			<data key="attr0000">44</data>
+			<data key="attr0001">Robert Hájek, Kryštof Hádek, Miroslav Hanuš, Zuzana Stivínová</data>
+			<data key="attr0002">2019</data>
+			<data key="attr0003">Karel Strachota</data>
+			<data key="attr0004">1989: Z dopisů psaných přes železnou oponu</data>
+			<data key="attr0005">97.5</data>
+			<data key="attr0006">1989: Z dopisů psaných přes železnou oponu (2019)</data>
+		</node>
+		<node id="Osud na nebi Josefa Janeby_2006">
+			<data key="attr0000">27</data>
+			<data key="attr0001">Ondřej Krejcar, Jan Dvořák</data>
+			<data key="attr0002">2006</data>
+			<data key="attr0003">Ondřej Krejcar</data>
+			<data key="attr0004">Osud na nebi Josefa Janeby</data>
+			<data key="attr0005">92.17391</data>
+			<data key="attr0006">Osud na nebi Josefa Janeby (2006)</data>
+		</node>
+		<node id="Film o dokumentu o Plodech moří_2017">
+			<data key="attr0000">18</data>
+			<data key="attr0001">Albert Romanutti</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Albert Romanutti, Pavel Borovička</data>
+			<data key="attr0004">Film o dokumentu o Plodech moří</data>
+			<data key="attr0005">92.22222</data>
+			<data key="attr0006">Film o dokumentu o Plodech moří (2017)</data>
+		</node>
+		<node id="Klymciw - Dakar mě změnil_2022">
+			<data key="attr0000">0</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2022</data>
+			<data key="attr0003">Ondřej Vodák, Jan-Jakub Šenkeřík</data>
+			<data key="attr0004">Klymciw - Dakar mě změnil</data>
+			<data key="attr0005">93.333336</data>
+			<data key="attr0006">Klymciw - Dakar mě změnil (2022)</data>
+		</node>
+		<node id="Ještě nejsem, kým chci být_2024">
+			<data key="attr0000">90</data>
+			<data key="attr0001">Libuše Jarcovjáková</data>
+			<data key="attr0002">2024</data>
+			<data key="attr0003">Klára Tasovská</data>
+			<data key="attr0004">Ještě nejsem, kým chci být</data>
+			<data key="attr0005">93.333336</data>
+			<data key="attr0006">Ještě nejsem, kým chci být (2024)</data>
+		</node>
+		<node id="Kronika Oldřicha S._2011">
+			<data key="attr0000">18</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003">Rudolf Šmíd</data>
+			<data key="attr0004">Kronika Oldřicha S.</data>
+			<data key="attr0005">92.94118</data>
+			<data key="attr0006">Kronika Oldřicha S. (2011)</data>
+		</node>
+		<node id="Quality Control Vol. 3_2006">
+			<data key="attr0000">0</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2006</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Quality Control Vol. 3</data>
+			<data key="attr0005">90.588234</data>
+			<data key="attr0006">Quality Control Vol. 3 (2006)</data>
+		</node>
+		<node id="Quality Control Vol. 2_2004">
+			<data key="attr0000">0</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2004</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Quality Control Vol. 2</data>
+			<data key="attr0005">92.94118</data>
+			<data key="attr0006">Quality Control Vol. 2 (2004)</data>
+		</node>
+		<node id="Expedice Repti Planet - Ománské dobrodružství_2020">
+			<data key="attr0000">52</data>
+			<data key="attr0001">Daniel Koleška, Vojtěch Víta, Ondřej Trávníček, Petr Hammerschmied</data>
+			<data key="attr0002">2020</data>
+			<data key="attr0003">Petr Hammerschmied</data>
+			<data key="attr0004">Expedice Repti Planet - Ománské dobrodružství</data>
+			<data key="attr0005">92.94118</data>
+			<data key="attr0006">Expedice Repti Planet - Ománské dobrodružství (2020)</data>
+		</node>
+		<node id="Jak to vlastně tenkrát bylo? 100 let od prvovýstupu na Jeptišku_2006">
+			<data key="attr0000">24</data>
+			<data key="attr0001">Pavel Rýva</data>
+			<data key="attr0002">2006</data>
+			<data key="attr0003">Pavel Rýva</data>
+			<data key="attr0004">Jak to vlastně tenkrát bylo? 100 let od prvovýstupu na Jeptišku</data>
+			<data key="attr0005">97.333336</data>
+			<data key="attr0006">Jak to vlastně tenkrát bylo? 100 let od prvovýstupu na Jeptišku (2006)</data>
+		</node>
+		<node id="Quality Control Vol. 4_2009">
+			<data key="attr0000">0</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2009</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Quality Control Vol. 4</data>
+			<data key="attr0005">92.0</data>
+			<data key="attr0006">Quality Control Vol. 4 (2009)</data>
+		</node>
+		<node id="Quality Control Vol. 1_2003">
+			<data key="attr0000">0</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2003</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Quality Control Vol. 1</data>
+			<data key="attr0005">93.333336</data>
+			<data key="attr0006">Quality Control Vol. 1 (2003)</data>
+		</node>
+		<node id="Babettou napříč Islandem_2020">
+			<data key="attr0000">0</data>
+			<data key="attr0001">Libor Vávra, Daniel Peprník, Martin Nykodým, Tomáš Gregor, Jakub Dlouhý, Tomáš Prudký</data>
+			<data key="attr0002">2020</data>
+			<data key="attr0003">Daniel Peprník, Libor Vávra</data>
+			<data key="attr0004">Babettou napříč Islandem</data>
+			<data key="attr0005">92.0</data>
+			<data key="attr0006">Babettou napříč Islandem (2020)</data>
+		</node>
+		<node id="Exprmntl KBH_2000">
+			<data key="attr0000">38</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2000</data>
+			<data key="attr0003">Alice Růžičková</data>
+			<data key="attr0004">Exprmntl KBH</data>
+			<data key="attr0005">94.28571</data>
+			<data key="attr0006">Exprmntl KBH (2000)</data>
+		</node>
+		<node id="Expedice Repti Planet – Chorvatské dobrodružství_2022">
+			<data key="attr0000">49</data>
+			<data key="attr0001">Daniel Koleška, Ondřej Trávníček, Tomáš Holer, Petr Hammerschmied</data>
+			<data key="attr0002">2022</data>
+			<data key="attr0003">Petr Hammerschmied</data>
+			<data key="attr0004">Expedice Repti Planet – Chorvatské dobrodružství</data>
+			<data key="attr0005">94.28571</data>
+			<data key="attr0006">Expedice Repti Planet – Chorvatské dobrodružství (2022)</data>
+		</node>
+		<node id="Expedice Repti Planet – Turecké dobrodružství_2021">
+			<data key="attr0000">36</data>
+			<data key="attr0001">Daniel Koleška, Vojtěch Víta, Tomáš Holer, Petr Hammerschmied</data>
+			<data key="attr0002">2021</data>
+			<data key="attr0003">Petr Hammerschmied</data>
+			<data key="attr0004">Expedice Repti Planet – Turecké dobrodružství</data>
+			<data key="attr0005">90.76923</data>
+			<data key="attr0006">Expedice Repti Planet – Turecké dobrodružství (2021)</data>
+		</node>
+		<node id="Kdy, když ne dnes..._1990">
+			<data key="attr0000">46</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">1990</data>
+			<data key="attr0003">Petr Kotek</data>
+			<data key="attr0004">Kdy, když ne dnes...</data>
+			<data key="attr0005">93.333336</data>
+			<data key="attr0006">Kdy, když ne dnes... (1990)</data>
+		</node>
+		<node id="Brutal Assault - vol. 15_2011">
+			<data key="attr0000">239</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003"></data>
+			<data key="attr0004">Brutal Assault - vol. 15</data>
+			<data key="attr0005">91.666664</data>
+			<data key="attr0006">Brutal Assault - vol. 15 (2011)</data>
+		</node>
+		<node id="All Through the Night_2020">
+			<data key="attr0000">20</data>
+			<data key="attr0001">Bob Boudreaux, Diego DiGiovanni, Julie Gibson Josephson</data>
+			<data key="attr0002">2020</data>
+			<data key="attr0003">Kiril Todorov</data>
+			<data key="attr0004">All Through the Night</data>
+			<data key="attr0005">91.666664</data>
+			<data key="attr0006">All Through the Night (2020)</data>
+		</node>
+		<node id="1000 Miles 2021 – Jih proti severu_2021">
+			<data key="attr0000">55</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2021</data>
+			<data key="attr0003">Aleš Nenička</data>
+			<data key="attr0004">1000 Miles 2021 – Jih proti severu</data>
+			<data key="attr0005">93.333336</data>
+			<data key="attr0006">1000 Miles 2021 – Jih proti severu (2021)</data>
+		</node>
+		<node id="Expedice Repti Planet - Arizonské dobrodružství_2024">
+			<data key="attr0000">98</data>
+			<data key="attr0001">Daniel Koleška, Ondřej Trávníček, Tomáš Holer, Martin Ertner, Dylan Souder, Petr Hammerschmied</data>
+			<data key="attr0002">2024</data>
+			<data key="attr0003">Petr Hammerschmied</data>
+			<data key="attr0004">Expedice Repti Planet - Arizonské dobrodružství</data>
+			<data key="attr0005">98.181816</data>
+			<data key="attr0006">Expedice Repti Planet - Arizonské dobrodružství (2024)</data>
+		</node>
+		<node id="Jan Špáta: 18 dokumentárních filmů klasika české kinematografie_2012">
+			<data key="attr0000">580</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2012</data>
+			<data key="attr0003">Jan Špáta</data>
+			<data key="attr0004">Jan Špáta: 18 dokumentárních filmů klasika české kinematografie</data>
+			<data key="attr0005">92.0</data>
+			<data key="attr0006">Jan Špáta: 18 dokumentárních filmů klasika české kinematografie (2012)</data>
+		</node>
+		<node id="Znamení Kříže_2016">
+			<data key="attr0000">59</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2016</data>
+			<data key="attr0003">Jaroslav Šilar</data>
+			<data key="attr0004">Znamení Kříže</data>
+			<data key="attr0005">98.0</data>
+			<data key="attr0006">Znamení Kříže (2016)</data>
+		</node>
+		<node id="Historické Jesenicko ve 3D_2024">
+			<data key="attr0000">32</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2024</data>
+			<data key="attr0003">Miroslav Tomka</data>
+			<data key="attr0004">Historické Jesenicko ve 3D</data>
+			<data key="attr0005">94.0</data>
+			<data key="attr0006">Historické Jesenicko ve 3D (2024)</data>
+		</node>
+		<edge id="Nagano 1998 - hokejový turnaj století_1998_Hokej v srdci_2003" source="Nagano 1998 - hokejový turnaj století_1998" target="Hokej v srdci_2003" directed="false">
+		</edge>
+		<edge id="Nagano 1998 - hokejový turnaj století_1998_Srdce v hokeji_2003" source="Nagano 1998 - hokejový turnaj století_1998" target="Srdce v hokeji_2003" directed="false">
+		</edge>
+		<edge id="Hokej v srdci_2003_Srdce v hokeji_2003" source="Hokej v srdci_2003" target="Srdce v hokeji_2003" directed="false">
+		</edge>
+		<edge id="Nepřítelem osudu_2008_Osud na nebi Josefa Janeby_2006" source="Nepřítelem osudu_2008" target="Osud na nebi Josefa Janeby_2006" directed="false">
+		</edge>
+		<edge id="Expedice Repti Planet - Ománské dobrodružství_2020_Expedice Repti Planet – Chorvatské dobrodružství_2022" source="Expedice Repti Planet - Ománské dobrodružství_2020" target="Expedice Repti Planet – Chorvatské dobrodružství_2022" directed="false">
+		</edge>
+		<edge id="Expedice Repti Planet - Ománské dobrodružství_2020_Expedice Repti Planet – Turecké dobrodružství_2021" source="Expedice Repti Planet - Ománské dobrodružství_2020" target="Expedice Repti Planet – Turecké dobrodružství_2021" directed="false">
+		</edge>
+		<edge id="Expedice Repti Planet - Ománské dobrodružství_2020_Expedice Repti Planet - Arizonské dobrodružství_2024" source="Expedice Repti Planet - Ománské dobrodružství_2020" target="Expedice Repti Planet - Arizonské dobrodružství_2024" directed="false">
+		</edge>
+		<edge id="Expedice Repti Planet – Chorvatské dobrodružství_2022_Expedice Repti Planet – Turecké dobrodružství_2021" source="Expedice Repti Planet – Chorvatské dobrodružství_2022" target="Expedice Repti Planet – Turecké dobrodružství_2021" directed="false">
+		</edge>
+		<edge id="Expedice Repti Planet – Chorvatské dobrodružství_2022_Expedice Repti Planet - Arizonské dobrodružství_2024" source="Expedice Repti Planet – Chorvatské dobrodružství_2022" target="Expedice Repti Planet - Arizonské dobrodružství_2024" directed="false">
+		</edge>
+		<edge id="Expedice Repti Planet – Turecké dobrodružství_2021_Expedice Repti Planet - Arizonské dobrodružství_2024" source="Expedice Repti Planet – Turecké dobrodružství_2021" target="Expedice Repti Planet - Arizonské dobrodružství_2024" directed="false">
+		</edge>
+	</graph>
+</graphml>
