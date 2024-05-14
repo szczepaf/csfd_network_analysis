@@ -24,13 +24,12 @@ public class Main {
             FilmNetwork network = new FilmNetwork();
 
             network.loadNodes(targetName, fc);
-            network.printNodes();
             String edgeCondition = "{\"commonActors\" : 2}";
             network.createEdges(ConditionFactory.createEdgeConditionFromJson(edgeCondition));
 
-            System.out.println(network.getEdges());
 
             network.visualize();
+            network.export("porevulocniCeskyCeskoslovenskyFilmExport.graphml");
 
 
 

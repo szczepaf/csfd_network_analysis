@@ -1,5 +1,6 @@
 package mff.cuni.szczepaf;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -7,7 +8,9 @@ import java.util.HashSet;
 import java.util.stream.Stream;
 
 import org.graphstream.graph.Graph;
+import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.SingleGraph;
+import org.graphstream.stream.file.FileSinkGraphML;
 import org.graphstream.ui.layout.springbox.implementations.SpringBox;
 import org.graphstream.ui.view.Viewer;
 
@@ -74,9 +77,6 @@ public class FilmNetwork implements INetwork {
             }
         }
     }
-    public void export(String filename) {
-        //TODO
-    }
 
     public ArrayList<Film> getNodes() {
         return nodes;
@@ -134,6 +134,57 @@ public class FilmNetwork implements INetwork {
         layout.setForce(0.5);  // Increase the repulsive force to spread nodes out more
         layout.setStabilizationLimit(0); // Stabilize more quickly, even if more imperfect
         viewer.enableAutoLayout(layout);
+    }
+    /**
+     * Exports the graph to a file using the GraphML format.
+     * @param filename target file for export
+     */
+    public void export(String filename) {
+        Graph graph = new SingleGraph("Exported Film Network");
+        populateGraph(graph);
+
+        // GraphStream FileSink for exporting graph to GraphML
+        FileSinkGraphML graphML = new FileSinkGraphML();
+
+        try {
+            graphML.writeAll(graph, filename);
+            System.out.println("Graph exported successfully to " + filename);
+        } catch (IOException e) {
+            System.err.println("Failed to export graph: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Helper method to ensure all data about films is exported in the GraphML
+     */
+    private void populateGraph(Graph graph) {
+        // Define the stylesheet and attributes
+        graph.setAttribute("ui.stylesheet", styleSheet());
+
+        // Add nodes with unique identifiers and detailed labels
+        for (Film film : nodes) {
+            String uniqueId = film.getName() + "_" + film.getDateCreated();
+            Node node = graph.addNode(uniqueId);
+            node.setAttribute("ui.label", film.getName() + " (" + film.getDateCreated() + ")");
+
+            // Set custom attribute names according to the Film class properties
+            node.setAttribute("duration", film.getDuration());
+            node.setAttribute("name", film.getName());
+            node.setAttribute("dateCreated", film.getDateCreated());
+            node.setAttribute("directors", String.join(", ", film.getDirectorNames()));
+            node.setAttribute("actors", String.join(", ", film.getActorNames()));
+            node.setAttribute("rating", film.getRating().getRatingValue());
+        }
+
+        // Add edges based on existing connections
+        for (Edge edge : edges) {
+            String sourceId = edge.getFilm1().getName() + "_" + edge.getFilm1().getDateCreated();
+            String targetId = edge.getFilm2().getName() + "_" + edge.getFilm2().getDateCreated();
+            String edgeId = sourceId + "_" + targetId;
+            if (graph.getEdge(edgeId) == null) {
+                graph.addEdge(edgeId, sourceId, targetId);
+            }
+        }
     }
 
     private String styleSheet() {
