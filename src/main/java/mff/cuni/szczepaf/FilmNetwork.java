@@ -105,7 +105,7 @@ public class FilmNetwork implements INetwork {
      * Uses the graphstream library to visualize the graph.
      * Keep in minds that this is mainly to demonstrate that the right things are happening, for more detailed analysis or visualization I recommend moving to Python and networkx.
      * That should be easy thanks to the export function.
-     * Currently, does not plot isolated vertices - as most of them would be isolated.
+     * Currently, does not plot isolated vertices - as most of the vertices would be isolated and the graph would be too cluttered.
      */
     @Override
     public void visualize() {

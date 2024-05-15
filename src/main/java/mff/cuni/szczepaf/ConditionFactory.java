@@ -71,7 +71,7 @@ public class ConditionFactory {
         }
 
         Predicate<Film> finalCompositeCondition = compositeCondition;
-        return film -> finalCompositeCondition.test(film);
+        return film -> finalCompositeCondition.test((Film) film);
         }
         catch (JSONException e){
             System.err.println("Invalid Condition! Check your node condition string.");
@@ -180,7 +180,7 @@ public class ConditionFactory {
             }
 
             BiPredicate<Film, Film> finalCompositeCondition = compositeCondition;
-            return (f, g) -> finalCompositeCondition.test(f, g);
+            return (f, g) -> finalCompositeCondition.test((Film) f, (Film) g);
         } catch (JSONException e) {
             System.err.println("Invalid Condition! Check your edge condition string.");
             return null;

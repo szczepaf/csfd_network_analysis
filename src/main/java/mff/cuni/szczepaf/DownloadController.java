@@ -50,7 +50,7 @@ public class DownloadController {
      * @param targetFile file to store Film data in.
      * @param timeout time between individual calls.
      */
-    public static void downloadFilmsFromLinks(String sourceFile, String targetFile, int timeout) {
+    public static void downloadMediaFromLinks(String sourceFile, String targetFile, int timeout) {
 
         if(!Files.exists(Paths.get(filmLinksDir + sourceFile))) {
             System.out.println("Source file does not exist!. Try again.");
