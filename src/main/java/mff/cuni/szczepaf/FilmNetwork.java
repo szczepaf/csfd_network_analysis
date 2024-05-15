@@ -26,6 +26,9 @@ import org.graphstream.ui.view.Viewer;
  */
 public class FilmNetwork implements INetwork {
 
+    public static String filmDataDirectory = "FilmData/";
+    public static String filmLinksDirectory = "FilmLinks/";
+    public static String testDirectory = "TestFiles/";
 
     private ArrayList<Film> nodes = new ArrayList<>();
     private ArrayList<Edge> edges = new ArrayList<>();
@@ -47,10 +50,11 @@ public class FilmNetwork implements INetwork {
      * @return true if all is parsed correctly, false if some problem occurs.
      */
     @Override
-    public Boolean loadNodes(String filename, NodeCondition condition) {
+    public Boolean loadNodes(String filename, NodeCondition condition, Boolean isForTests) {
         FilmParser filmParser = new FilmParser();
-        String filmDataDirectory = "FilmData/";
-        try (Stream<String> stream = Files.lines(Paths.get(filmDataDirectory + filename))) {
+        String directory = filmDataDirectory;
+        if (isForTests) directory = testDirectory;
+        try (Stream<String> stream = Files.lines(Paths.get(directory + filename))) {
             stream.forEach(line -> {
                 try {
                     String jsonPart = line.split(":", 2)[1].trim(); // example line: 341532: {"name": "Láska, soudruhu", "duration": 101, "dateCreated": 2013, "directors": ["Taru Mäkelä"], "actors": ["Kati Outinen", "Miroslav Etzler", "Elena Leeve", "Kryštof Hádek", "Esko Salminen", "Laura Birn", "Vesa Vierikko", "Tommi Korpela", "Denny Ratajský", "Petr Stach"], "rating": 55.33869}

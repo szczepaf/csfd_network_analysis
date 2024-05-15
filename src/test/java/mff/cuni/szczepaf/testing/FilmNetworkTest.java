@@ -12,10 +12,10 @@ public class FilmNetworkTest {
     @Test
     public void testFilmLoadingWithCondition(){
         String conditionJSONString = "{\"duration\":[\">100\"], \"rating\":[\"<85.0\"], \"dateCreated\":[\">2005\"], \"actors\":[{\"notcontains\":\"Christian Bale\"}]}";
-        String filename = "TestFiles/FilmsForNodeFilterTesting.txt";
+        String filename = "FilmsForNodeFilterTesting.txt";
         FilmNetwork filmNetwork = new FilmNetwork();
         NodeCondition fc = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
-        filmNetwork.loadNodes(filename, fc);
+        filmNetwork.loadNodes(filename, fc, true);
 
         // These films should be present:
         // {"name": "Casino Royale", "duration":144, "dateCreated": 2006, "directors": ["Martin Campbell"], "actors": ["Daniel Craig", "Eva Green", "Mads Mikkelsen", "Judi Dench", "Jeffrey Wright", "Giancarlo Giannini", "Caterina Murino", "Simon Abkarian", "Isaach De Bankolé", "Jesper Christensen"], "rating": 82.504036}

@@ -73,7 +73,7 @@ public class Main {
         if (fc != null) {
             String filename = getValidSourceFile(dataDirectory);
             if (filename != null) {
-                Boolean loaded = network.loadNodes(filename, fc);
+                Boolean loaded = network.loadNodes(filename, fc, false);
                 if (loaded) System.out.println("Nodes loaded successfully into the Film Graph.");
             }
         }

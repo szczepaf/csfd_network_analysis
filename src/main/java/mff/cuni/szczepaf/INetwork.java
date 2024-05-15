@@ -13,7 +13,7 @@ public interface INetwork {
      * @param condition Condition a node has to satisfy to be added
      * @return true if all is parsed correctly, false if some problem occurs.
      */
-    Boolean loadNodes(String filename, NodeCondition condition);
+    Boolean loadNodes(String filename, NodeCondition condition, Boolean isForTesting);
 
     /**
      * Exports the network in some legible format.
