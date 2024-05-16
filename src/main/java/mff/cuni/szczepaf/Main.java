@@ -2,7 +2,12 @@ package mff.cuni.szczepaf;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONArray;
 
 /**
  * Main provides a console-like interface to sends commands to visualize, export, etc. the Network that is being analyzed.
@@ -18,13 +23,19 @@ public class Main {
     private static String linkDirectory = "FilmLinks/";
     private static String dataDirectory = "FilmData/";
 
+    private static final ArrayList<String> VALID_NODE_KEYS = new ArrayList<String>(Arrays.asList("rating", "actors", "directors", "dateCreated", "duration"));
+    private static final ArrayList<String> VALID_EDGE_KEYS = new ArrayList<String> (Arrays.asList("commonActors", "commonDirector"));
+
 
     public static void main(String[] args) {
+
+
+
         System.setProperty("org.graphstream.ui", "swing"); // necessary for graph visualization
         network = new FilmNetwork();
         scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the Film Network CLI."); // TODO Make this more fancy
+        System.out.println("Welcome to the Film Network Console."); // TODO Make this more fancy
         printHelp();
 
         String command = "";
@@ -67,14 +78,15 @@ public class Main {
      * and loads selected nodes into the network.
      */
     private static void loadNodes() {
-        System.out.print("Enter JSON string for node condition: ");
-        String conditionJSONString = scanner.nextLine().trim();
-        NodeCondition fc = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
-        if (fc != null) {
-            String filename = getValidSourceFile(dataDirectory);
-            if (filename != null) {
-                Boolean loaded = network.loadNodes(filename, fc, false);
-                if (loaded) System.out.println("Nodes loaded successfully into the Film Graph.");
+        String conditionJSONString = getValidNodeCondition();
+        if (conditionJSONString != null) {
+            NodeCondition fc = ConditionFactory.createNodeConditionFromJson(conditionJSONString);
+            if (fc != null) {
+                String filename = getValidSourceFile(dataDirectory);
+                if (filename != null) {
+                    Boolean loaded = network.loadNodes(filename, fc, false);
+                    if (loaded) System.out.println("Nodes loaded successfully into the Film Graph.");
+                }
             }
         }
     }
@@ -85,12 +97,13 @@ public class Main {
      * See ConditionFactory class for more details.
      */
     private static void createEdges() {
-        System.out.print("Enter JSON string for edge condition: ");
-        String conditionJSONString = scanner.nextLine().trim();
-        EdgeCondition ec = ConditionFactory.createEdgeConditionFromJson(conditionJSONString);
-        if (ec != null) {
-            network.createEdges(ec);
-            System.out.println("Edges created successfully.");
+        String conditionJSONString = getValidEdgeCondition();
+        if (conditionJSONString != null) {
+            EdgeCondition ec = ConditionFactory.createEdgeConditionFromJson(conditionJSONString);
+            if (ec != null) {
+                network.createEdges(ec);
+                System.out.println("Edges created successfully.");
+            }
         }
     }
 
@@ -191,5 +204,64 @@ public class Main {
         return sourceFile;
     }
 
+
+    /**
+     * Method that reads and validates a JSON string for node condition.
+     * @return The valid JSON string for node condition or null if invalid.
+     */
+    private static String getValidNodeCondition() {
+        System.out.print("Enter JSON string for node condition: ");
+        String conditionJSONString = scanner.nextLine().trim();
+
+        try {
+            JSONObject conditions = new JSONObject(conditionJSONString);
+
+            for (String key : conditions.keySet()) {
+                if (!VALID_NODE_KEYS.contains(key)) {
+                    System.out.println("Invalid key: " + key);
+                    System.out.println("Valid keys for node condition are: " + String.join(", ", VALID_NODE_KEYS));
+                    return null;
+                }
+            }
+
+            for (String key : conditions.keySet()) {
+                if (!(conditions.get(key) instanceof JSONArray)) {
+                    System.out.println("Value for key " + key + " should be an array. Refer to the user manual.");
+                    return null;
+                }
+            }
+            return conditionJSONString;
+
+        } catch (JSONException e) {
+            System.out.println("Invalid JSON format. Please check your input.");
+            return null;
+        }
+    }
+
+    /**
+     * Method that reads and validates a JSON string for edge condition.
+     * @return The valid JSON string for edge condition or null if invalid.
+     */
+    private static String getValidEdgeCondition() {
+        System.out.print("Enter JSON string for edge condition: ");
+        String conditionJSONString = scanner.nextLine().trim();
+
+        try {
+            JSONObject conditions = new JSONObject(conditionJSONString);
+
+            for (String key : conditions.keySet()) {
+                if (!VALID_EDGE_KEYS.contains(key)) {
+                    System.out.println("Invalid key: " + key);
+                    System.out.println("Valid keys for edge condition are: " + String.join(", ", VALID_EDGE_KEYS));
+                    return null;
+                }
+            }
+            return conditionJSONString;
+
+        } catch (JSONException e) {
+            System.out.println("Invalid JSON format. Please check your input.");
+            return null;
+        }
+    }
 
 }
