@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+	   http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+	<key id="attr0000" for="node" attr.name="duration" attr.type="int"/>
+	<key id="attr0001" for="node" attr.name="actors" attr.type="string"/>
+	<key id="attr0002" for="node" attr.name="dateCreated" attr.type="int"/>
+	<key id="attr0003" for="node" attr.name="directors" attr.type="string"/>
+	<key id="attr0004" for="node" attr.name="name" attr.type="string"/>
+	<key id="attr0005" for="node" attr.name="rating" attr.type="float"/>
+	<key id="attr0006" for="node" attr.name="ui.label" attr.type="string"/>
+	<graph id="Exported Film Network" edgedefault="undirected">
+		<node id="Valčík s Bašírem_2008">
+			<data key="attr0000">90</data>
+			<data key="attr0001">Ari Folman, Ori Sivan, Miki Leon, Yehezkel Lazarov</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Ari Folman</data>
+			<data key="attr0004">Valčík s Bašírem</data>
+			<data key="attr0005">84.02627</data>
+			<data key="attr0006">Valčík s Bašírem (2008)</data>
+		</node>
+		<node id="Borg/McEnroe_2017">
+			<data key="attr0000">107</data>
+			<data key="attr0001">Sverrir Gudnason, Shia LaBeouf, Stellan Skarsgård, Tuva Novotny, Leo Borg, Jackson Gann, Scott Arthur, Ian Blackman, Robert Emms, David Bamber</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Janus Metz</data>
+			<data key="attr0004">Borg/McEnroe</data>
+			<data key="attr0005">76.66541</data>
+			<data key="attr0006">Borg/McEnroe (2017)</data>
+		</node>
+		<node id="Muž bez minulosti_2002">
+			<data key="attr0000">97</data>
+			<data key="attr0001">Markku Peltola, Kati Outinen, Juhani Niemelä, Kaija Pakarinen, Sakari Kuosmanen, Annikki Tähti, Anneli Sauli, Elina Salo, Outi Mäenpää, Esko Nikkari</data>
+			<data key="attr0002">2002</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Muž bez minulosti</data>
+			<data key="attr0005">78.17625</data>
+			<data key="attr0006">Muž bez minulosti (2002)</data>
+		</node>
+		<node id="Domov šedých motýlů_2008">
+			<data key="attr0000">102</data>
+			<data key="attr0001">Niilo Syväoja, Tommi Korpela, Kristiina Halttu, Kati Outinen, Pertti Sveholm, Matleena Kuusniemi, Eero Milonoff, Marjut Maristo, Roope Karisto, Ville Saksela</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Dome Karukoski</data>
+			<data key="attr0004">Domov šedých motýlů</data>
+			<data key="attr0005">76.78615</data>
+			<data key="attr0006">Domov šedých motýlů (2008)</data>
+		</node>
+		<node id="Le Havre_2011">
+			<data key="attr0000">93</data>
+			<data key="attr0001">André Wilms, Jean-Pierre Darroussin, Kati Outinen, Blondin Miguel, Elina Salo, Evelyne Didi, Quoc Dung Nguyen, Pierre Étaix, Jean-Pierre Léaud, Laïka</data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Le Havre</data>
+			<data key="attr0005">74.5617</data>
+			<data key="attr0006">Le Havre (2011)</data>
+		</node>
+		<node id="Legenda o Vánocích_2007">
+			<data key="attr0000">81</data>
+			<data key="attr0001">Hannu-Pekka Björkman, Otto Gustavsson, Jonas Rinne, Kari Väänänen, Minna Haapkylä, Mikko Leppilampi, Mikko Kouki, Oskari Heimonen, Roi Ron, Laura Birn</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Juha Wuolijoki</data>
+			<data key="attr0004">Legenda o Vánocích</data>
+			<data key="attr0005">77.28621</data>
+			<data key="attr0006">Legenda o Vánocích (2007)</data>
+		</node>
+		<node id="Restart_2005">
+			<data key="attr0000">85</data>
+			<data key="attr0001">Lenka Krobotová, Filip Čapka, Anna Polívková, Václav Jiráček, Miroslav Krobot, Jitka Čvančarová, Kostas Zerdaloglu, Jan Révai, Michal Zelenka, Marko Igonda</data>
+			<data key="attr0002">2005</data>
+			<data key="attr0003">Julius Ševčík</data>
+			<data key="attr0004">Restart</data>
+			<data key="attr0005">58.374672</data>
+			<data key="attr0006">Restart (2005)</data>
+		</node>
+		<node id="Druhá strana naděje_2017">
+			<data key="attr0000">98</data>
+			<data key="attr0001">Sherwan Haji, Sakari Kuosmanen, Tommi Korpela, Janne Hyytiäinen, Ilkka Koivula, Kaija Pakarinen, Nuppu Koivu, Tuomari Nurmio, Ville Virtanen, Sulevi Peltola</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Druhá strana naděje</data>
+			<data key="attr0005">73.01927</data>
+			<data key="attr0006">Druhá strana naděje (2017)</data>
+		</node>
+		<node id="Imaginaerum_2012">
+			<data key="attr0000">82</data>
+			<data key="attr0001">Marianne Farley, Quinn Lord, Francis X. McCarthy, Ilkka Villi, Joanna Noyes, Keyanna Fielding, Stéphane Demers, Ron Lea, Hélène Robbie, Tuomas Holopainen</data>
+			<data key="attr0002">2012</data>
+			<data key="attr0003">Stobe Harju</data>
+			<data key="attr0004">Imaginaerum</data>
+			<data key="attr0005">73.43921</data>
+			<data key="attr0006">Imaginaerum (2012)</data>
+		</node>
+		<node id="1944: Přinuceni k boji_2015">
+			<data key="attr0000">100</data>
+			<data key="attr0001">Märt Pius, Mait Malmsten, Ain Mäeots, Gert Raudsep, Rain Simmul, Ivo Uukkivi, Tõnu Oja, Jaak Prints, Martin Mill, Peeter Tammearu</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Elmo Nüganen</data>
+			<data key="attr0004">1944: Přinuceni k boji</data>
+			<data key="attr0005">75.77859</data>
+			<data key="attr0006">1944: Přinuceni k boji (2015)</data>
+		</node>
+		<node id="Bohémský život_1992">
+			<data key="attr0000">100</data>
+			<data key="attr0001">Matti Pellonpää, Evelyne Didi, André Wilms, Kari Väänänen, Christine Murillo, Jean-Pierre Léaud, Carlos Salgado, Alexis Nitzer, Sylvie Van den Elsen, Gilles Charmant</data>
+			<data key="attr0002">1992</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Bohémský život</data>
+			<data key="attr0005">83.46235</data>
+			<data key="attr0006">Bohémský život (1992)</data>
+		</node>
+		<node id="Najal jsem si vraha_1990">
+			<data key="attr0000">79</data>
+			<data key="attr0001">Jean-Pierre Léaud, Margi Clarke, Kenneth Colley, Serge Reggiani, Nicky Tesco, Charles Cork, Angela Walsh, Michael O&apos;Hagan, Walter Sparrow, Tony Rohr</data>
+			<data key="attr0002">1990</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Najal jsem si vraha</data>
+			<data key="attr0005">77.57622</data>
+			<data key="attr0006">Najal jsem si vraha (1990)</data>
+		</node>
+		<node id="Dalších deset minut_2002">
+			<data key="attr0000">92</data>
+			<data key="attr0001">Markku Peltola, Kati Outinen, Janne Hyytiäinen, Chloë Sevigny, Amber Tamblyn, Yixiang Li, Wim Wenders, Marko Haavisto, Jamie Hector, Yuanzheng Feng</data>
+			<data key="attr0002">2002</data>
+			<data key="attr0003">Aki Kaurismäki, Víctor Erice, Werner Herzog</data>
+			<data key="attr0004">Dalších deset minut</data>
+			<data key="attr0005">74.04189</data>
+			<data key="attr0006">Dalších deset minut (2002)</data>
+		</node>
+		<node id="Lví srdce_2013">
+			<data key="attr0000">99</data>
+			<data key="attr0001">Peter Franzén, Laura Birn, Jasper Pääkkönen, Yusufa Sidibeh, Jussi Vatanen, Timo Lavikainen, Pamela Tola, Mikko Neuvonen, Niko Vakkuri, Jani Toivola</data>
+			<data key="attr0002">2013</data>
+			<data key="attr0003">Dome Karukoski</data>
+			<data key="attr0004">Lví srdce</data>
+			<data key="attr0005">76.9992</data>
+			<data key="attr0006">Lví srdce (2013)</data>
+		</node>
+		<node id="Děvče ze sirkárny_1990">
+			<data key="attr0000">68</data>
+			<data key="attr0001">Kati Outinen, Elina Salo, Esko Nikkari, Vesa Vierikko, Reijo Taipale, Silu Seppälä, Outi Mäenpää, Marja Packalén, Richard Reitinger, Helka Viljanen</data>
+			<data key="attr0002">1990</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Děvče ze sirkárny</data>
+			<data key="attr0005">79.76647</data>
+			<data key="attr0006">Děvče ze sirkárny (1990)</data>
+		</node>
+		<node id="Světla v soumraku_2006">
+			<data key="attr0000">78</data>
+			<data key="attr0001">Janne Hyytiäinen, Maria Järvenhelmi, Maria Heiskanen, Ilkka Koivula, Sergej Doudko, Andrei Gennadiev, Arturas Pozdniakovas, Matti Onnismaa, Sulevi Peltola, Antti Reini</data>
+			<data key="attr0002">2006</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Světla v soumraku</data>
+			<data key="attr0005">71.223305</data>
+			<data key="attr0006">Světla v soumraku (2006)</data>
+		</node>
+		<node id="Zakázané ovoce_2009">
+			<data key="attr0000">104</data>
+			<data key="attr0001">Marjut Maristo, Amanda Pilke, Malla Malmivaara, Joel Mäkinen, Jarkko Niemi, Olavi Uusivirta, Timo Tikka, Jani Volanen, Teemu Ojanne, Heikki Nousiainen</data>
+			<data key="attr0002">2009</data>
+			<data key="attr0003">Dome Karukoski</data>
+			<data key="attr0004">Zakázané ovoce</data>
+			<data key="attr0005">70.71869</data>
+			<data key="attr0006">Zakázané ovoce (2009)</data>
+		</node>
+		<node id="Láska, soudruhu_2013">
+			<data key="attr0000">101</data>
+			<data key="attr0001">Kati Outinen, Miroslav Etzler, Elena Leeve, Kryštof Hádek, Esko Salminen, Laura Birn, Vesa Vierikko, Tommi Korpela, Denny Ratajský, Petr Stach</data>
+			<data key="attr0002">2013</data>
+			<data key="attr0003">Taru Mäkelä</data>
+			<data key="attr0004">Láska, soudruhu</data>
+			<data key="attr0005">55.33869</data>
+			<data key="attr0006">Láska, soudruhu (2013)</data>
+		</node>
+		<node id="Mraky odtáhly_1996">
+			<data key="attr0000">96</data>
+			<data key="attr0001">Kati Outinen, Kari Väänänen, Elina Salo, Sakari Kuosmanen, Matti Onnismaa, Markku Peltola, Markus Allan, Paul Granfelt, Kari Lindqvist, Tommi Parkkonen</data>
+			<data key="attr0002">1996</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Mraky odtáhly</data>
+			<data key="attr0005">81.20567</data>
+			<data key="attr0006">Mraky odtáhly (1996)</data>
+		</node>
+		<node id="Stíny v ráji_1986">
+			<data key="attr0000">76</data>
+			<data key="attr0001">Matti Pellonpää, Kati Outinen, Sakari Kuosmanen, Esko Nikkari, Kylli Köngäs, Pekka Laiho, Jukka-Pekka Palo, Svante Korkiakoski, Safka Pekkonen, Mari Rantasila</data>
+			<data key="attr0002">1986</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Stíny v ráji</data>
+			<data key="attr0005">79.45098</data>
+			<data key="attr0006">Stíny v ráji (1986)</data>
+		</node>
+		<node id="Juha_1999">
+			<data key="attr0000">78</data>
+			<data key="attr0001">Sakari Kuosmanen, Kati Outinen, André Wilms, Markku Peltola, Elina Salo, Ona Kamu, Outi Mäenpää, Tuire Tuomisto, Tatiana Soloviova, Esko Nikkari</data>
+			<data key="attr0002">1999</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Juha</data>
+			<data key="attr0005">77.40642</data>
+			<data key="attr0006">Juha (1999)</data>
+		</node>
+		<node id="Patrik - věk 1,5_2008">
+			<data key="attr0000">100</data>
+			<data key="attr0001">Gustaf Skarsgård, Torkel Petersson, Tom Ljungman, Amanda Davin, Annika Hallin, Jacob Ericksson, Anette Sevreus, Mats Blomgren, Malin Cederblad, Antti Reini</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Ella Lemhagen</data>
+			<data key="attr0004">Patrik - věk 1,5</data>
+			<data key="attr0005">74.666664</data>
+			<data key="attr0006">Patrik - věk 1,5 (2008)</data>
+		</node>
+		<node id="Věčný bojovník_2006">
+			<data key="attr0000">100</data>
+			<data key="attr0001">Tommi Eronen, Markku Peltola, Ťing-čchu Čang, Krista Kosonen, Haoyu Dang, Elle Kull, Liansheng Tong, Xiaomei Tong, Qiupu Tao, Pirkko Hämäläinen</data>
+			<data key="attr0002">2006</data>
+			<data key="attr0003">Antti-Jussi Annila</data>
+			<data key="attr0004">Věčný bojovník</data>
+			<data key="attr0005">57.17647</data>
+			<data key="attr0006">Věčný bojovník (2006)</data>
+		</node>
+		<node id="Rok vlka_2007">
+			<data key="attr0000">95</data>
+			<data key="attr0001">Krista Kosonen, Kari Heiskanen, Johanna af Schultén, Kai Vaine, Ville Virtanen, Katariina Kaitue, Kristiina Halttu, Jukka Puotila, Anne-Mari Alaspää, Aksa Korttila</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Olli Saarela</data>
+			<data key="attr0004">Rok vlka</data>
+			<data key="attr0005">72.17911</data>
+			<data key="attr0006">Rok vlka (2007)</data>
+		</node>
+		<node id="Jak se neztratit v L.A._1998">
+			<data key="attr0000">107</data>
+			<data key="attr0001">David Tennant, Vinessa Shaw, Vincent Gallo, Julie Delpy, Saskia Reeves, Margi Clarke, Monte Hellman, Jean-Pierre Kalfon, Lisa Edelstein, Joe Dallesandro</data>
+			<data key="attr0002">1998</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Jak se neztratit v L.A.</data>
+			<data key="attr0005">60.57315</data>
+			<data key="attr0006">Jak se neztratit v L.A. (1998)</data>
+		</node>
+		<node id="Rozkaz_2008">
+			<data key="attr0000">115</data>
+			<data key="attr0001">Samuli Vauramo, Pihla Viitala, Eero Aho, Eemeli Louhimies, Miina Maasola, Riina Maidre, Sulevi Peltola, Oskar Pöysti, Mikko Kouki, Janne Virtanen</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Aku Louhimies</data>
+			<data key="attr0004">Rozkaz</data>
+			<data key="attr0005">73.38608</data>
+			<data key="attr0006">Rozkaz (2008)</data>
+		</node>
+		<node id="Nejšťastnější den v životě Olliho Mäkiho_2016">
+			<data key="attr0000">92</data>
+			<data key="attr0001">Jarkko Lahti, Oona Airola, Eero Milonoff, Joanna Haartti, Esko Barquero, Elma Milonoff, Leimu Leisti, Hilma Milonoff, Olli Rahkonen, Joonas Saartamo</data>
+			<data key="attr0002">2016</data>
+			<data key="attr0003">Juho Kuosmanen</data>
+			<data key="attr0004">Nejšťastnější den v životě Olliho Mäkiho</data>
+			<data key="attr0005">69.21536</data>
+			<data key="attr0006">Nejšťastnější den v životě Olliho Mäkiho (2016)</data>
+		</node>
+		<node id="Ariel_1988">
+			<data key="attr0000">73</data>
+			<data key="attr0001">Turo Pajala, Susanna Haavisto, Matti Pellonpää, Eetu Hilkamo, Erkki Pajala, Matti Jaaranen, Hannu Viholainen, Jorma Markkula, Tarja Keinänen, Eino Kuusela</data>
+			<data key="attr0002">1988</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Ariel</data>
+			<data key="attr0005">79.731544</data>
+			<data key="attr0006">Ariel (1988)</data>
+		</node>
+		<node id="Moje matka_2005">
+			<data key="attr0000">111</data>
+			<data key="attr0001">Topi Majaniemi, Marjaana Maijala, Maria Lundqvist, Michael Nyqvist, Esko Salminen, Aino-Maija Tikkanen, Kari-Pekka Toivonen, Brasse Brännström, Ia Langhammer, Penny Elvira Loftéen</data>
+			<data key="attr0002">2005</data>
+			<data key="attr0003">Klaus Härö</data>
+			<data key="attr0004">Moje matka</data>
+			<data key="attr0005">82.71186</data>
+			<data key="attr0006">Moje matka (2005)</data>
+		</node>
+		<node id="Tom of Finland_2017">
+			<data key="attr0000">115</data>
+			<data key="attr0001">Pekka Strang, Jakob Oftebro, Werner Daehn, Þorsteinn Bachmann, Jessica Grabowsky, Jimmy Shaw, Lauri Tilkanen, Kari Hietalahti, Meri Nenonen, Siim Maaten</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Dome Karukoski</data>
+			<data key="attr0004">Tom of Finland</data>
+			<data key="attr0005">65.747574</data>
+			<data key="attr0006">Tom of Finland (2017)</data>
+		</node>
+		<node id="Zločin a trest_1983">
+			<data key="attr0000">91</data>
+			<data key="attr0001">Markku Toikka, Aino Seppo, Esko Nikkari, Hannu Lauri, Olli Tuominen, Matti Pellonpää, Kari Sorvali, Pentti Auer, Asmo Hurula, Risto Aaltonen</data>
+			<data key="attr0002">1983</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Zločin a trest</data>
+			<data key="attr0005">71.34694</data>
+			<data key="attr0006">Zločin a trest (1983)</data>
+		</node>
+		<node id="Nový život_2007">
+			<data key="attr0000">101</data>
+			<data key="attr0001">Lo Kauppi, Ellen Jelinek, Ann-Sofie Nurmi, Nadja Mirmiran, Tobias Aspelin, Linda Kulle, Monica Edwardson, Happy Jankell, Anna Littorin, Bengt C.W. Carlsson</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Klaus Härö</data>
+			<data key="attr0004">Nový život</data>
+			<data key="attr0005">76.516396</data>
+			<data key="attr0006">Nový život (2007)</data>
+		</node>
+		<node id="Ejzenštejn v Guanajuatu_2015">
+			<data key="attr0000">105</data>
+			<data key="attr0001">Elmer Bäck, Stelio Savante, Lisa Owen, Maya Zapata, Luis Alberti, Rasmus Slätis, Jakob Öhrman, Leo Idman, Mika Ainola, Timo Jaatinen</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Peter Greenaway</data>
+			<data key="attr0004">Ejzenštejn v Guanajuatu</data>
+			<data key="attr0005">68.540306</data>
+			<data key="attr0006">Ejzenštejn v Guanajuatu (2015)</data>
+		</node>
+		<node id="Cesta časem_2017">
+			<data key="attr0000">87</data>
+			<data key="attr0001">Carsten Bjørnlund, Sofia Helin, Marijana Jankovic, Stina Ekblad, Joseph Mawle, Dragomir Mrsic, Annika Wedderkopp, Thomas Hwan, Baard Owe, Emilia Imperatore Bjørnvad</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Max Kestner</data>
+			<data key="attr0004">Cesta časem</data>
+			<data key="attr0005">60.04762</data>
+			<data key="attr0006">Cesta časem (2017)</data>
+		</node>
+		<node id="Automat na lásku_2000">
+			<data key="attr0000">111</data>
+			<data key="attr0001">Mikko Nousiainen, Laura Malmivaara, Irina Björklund, Petteri Summanen, Matleena Kuusniemi, Valtteri Roiha, Samuli Edelmann, Vilma Melasniemi, Eija Nousiainen, Jaana Järvinen</data>
+			<data key="attr0002">2000</data>
+			<data key="attr0003">Aku Louhimies</data>
+			<data key="attr0004">Automat na lásku</data>
+			<data key="attr0005">64.7482</data>
+			<data key="attr0006">Automat na lásku (2000)</data>
+		</node>
+		<node id="Hamlet podniká_1987">
+			<data key="attr0000">86</data>
+			<data key="attr0001">Pirkka-Pekka Petelius, Esko Salminen, Kati Outinen, Elina Salo, Esko Nikkari, Kari Väänänen, Puntti Valtonen, Mari Rantasila, Turo Pajala, Aake Kalliala</data>
+			<data key="attr0002">1987</data>
+			<data key="attr0003">Aki Kaurismäki</data>
+			<data key="attr0004">Hamlet podniká</data>
+			<data key="attr0005">74.85437</data>
+			<data key="attr0006">Hamlet podniká (1987)</data>
+		</node>
+		<node id="Černý led_2007">
+			<data key="attr0000">110</data>
+			<data key="attr0001">Outi Mäenpää, Ria Kataja, Martti Suosalo, Ville Virtanen, Sara Paavolainen, Netta Heikkilä, Väinö Heiskanen, Philipp Danne, Matti Laine, Emilia Sinisalo</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Petri Kotwica</data>
+			<data key="attr0004">Černý led</data>
+			<data key="attr0005">74.74452</data>
+			<data key="attr0006">Černý led (2007)</data>
+		</node>
+		<node id="Tali-Ihantala 1944_2007">
+			<data key="attr0000">117</data>
+			<data key="attr0001">Rauno Ahonen, Mikkomarkus Ahtiainen, Frank Biermann, Jussi Brech, Mikko Bredenberg, Riko Eklundh, Marc Gassot, Marcus Groth, Johan Hallström, Kari Hevossaari</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Åke Lindman, Sakari Kirjavainen</data>
+			<data key="attr0004">Tali-Ihantala 1944</data>
+			<data key="attr0005">69.43489</data>
+			<data key="attr0006">Tali-Ihantala 1944 (2007)</data>
+		</node>
+		<node id="Královna Kristýna_2015">
+			<data key="attr0000">106</data>
+			<data key="attr0001">Malin Buska, Sarah Gadon, Michael Nyqvist, Lucas Bryant, Laura Birn, Hippolyte Girardot, Peter Lohmeyer, François Arnaud, Patrick Bauchau, Ville Virtanen</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Královna Kristýna</data>
+			<data key="attr0005">55.665024</data>
+			<data key="attr0006">Královna Kristýna (2015)</data>
+		</node>
+		<node id="Šermíř_2015">
+			<data key="attr0000">99</data>
+			<data key="attr0001">Märt Avandi, Ursula Ratasepp, Hendrik Toompere, Liisa Koppel, Joonas Koff, Egert Kadatsu, Ann-Lisett Rebane, Elbe Reiter, Jaak Prints, Kirill Käro</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Klaus Härö</data>
+			<data key="attr0004">Šermíř</data>
+			<data key="attr0005">70.85859</data>
+			<data key="attr0006">Šermíř (2015)</data>
+		</node>
+		<node id="Zákon ledové země_2017">
+			<data key="attr0000">90</data>
+			<data key="attr0001">Ville Virtanen, Antti Holma, Mikko Neuvonen, Jørgen Langhelle, Outi Mäenpää, Pernilla August, Malin Buska, Trond Halbo, Kristoffer Isaksen, Erik Smith Meyer</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Jussi Hiltunen</data>
+			<data key="attr0004">Zákon ledové země</data>
+			<data key="attr0005">46.80307</data>
+			<data key="attr0006">Zákon ledové země (2017)</data>
+		</node>
+		<node id="Na druhé straně_2010">
+			<data key="attr0000">99</data>
+			<data key="attr0001">Noomi Rapace, Ola Rapace, Outi Mäenpää, Ville Virtanen, Tehilla Blad, Junior Blad, Alpha Blad, Selma Cuba, Minna Haapkylä, Håkan Bengtsson</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003">Pernilla August</data>
+			<data key="attr0004">Na druhé straně</data>
+			<data key="attr0005">72.45478</data>
+			<data key="attr0006">Na druhé straně (2010)</data>
+		</node>
+		<node id="Sebbe_2010">
+			<data key="attr0000">80</data>
+			<data key="attr0001">Sebastian Hiort af Ornäs, Eva Melander, Kenny Wåhlbrink, Miran Kamala, Martin Wallström, Sebastian Sporsén, Emil Kadeby, Adrian Ringman, Leo Salomon Ringart, Åsa Bodin Karlsson</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003">Babak Najafi</data>
+			<data key="attr0004">Sebbe</data>
+			<data key="attr0005">70.10471</data>
+			<data key="attr0006">Sebbe (2010)</data>
+		</node>
+		<node id="Laponská odysea_2010">
+			<data key="attr0000">96</data>
+			<data key="attr0001">Pamela Tola, Jussi Vatanen, Jasper Pääkkönen, Timo Lavikainen, Konsta Mäkelä, Sinikka Mokkila, Erkki Hetta, Asko Sahlman, Kari Ketonen, Miia Nuutila</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003">Dome Karukoski</data>
+			<data key="attr0004">Laponská odysea</data>
+			<data key="attr0005">71.52815</data>
+			<data key="attr0006">Laponská odysea (2010)</data>
+		</node>
+		<node id="Arytmie_2017">
+			<data key="attr0000">116</data>
+			<data key="attr0001">Alexandr Jacenko, Irina Gorbačjova, Nikolaj Šrajber, Anna Ukolova, Anna Kotova-Děrjabina, Vladimir Kapustin, Maxim Lagaškin, Alexandr Samojlenko, Sergej Udovik, Sergej Nasedkin</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Boris Chlebnikov</data>
+			<data key="attr0004">Arytmie</data>
+			<data key="attr0005">74.31635</data>
+			<data key="attr0006">Arytmie (2017)</data>
+		</node>
+		<node id="Kluci_2015">
+			<data key="attr0000">102</data>
+			<data key="attr0001">Tuva Jagell, Emrik Öhlander, Louise Nyvall, Alexander Gustavsson, Wilma Holmén, Vilgot Ostwald Vesterlund, Mandus Berg, Adam Dahlgren, Filip Vester, Josefin Neldén</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Alexandra-Therese Keining</data>
+			<data key="attr0004">Kluci</data>
+			<data key="attr0005">62.168022</data>
+			<data key="attr0006">Kluci (2015)</data>
+		</node>
+		<node id="8-Ball_2013">
+			<data key="attr0000">107</data>
+			<data key="attr0001">Jessica Grabowsky, Eero Aho, Pirkka-Pekka Petelius, Mikko Leppilampi, Jakob Öhrman, Cecilia McMillan, Rosa Salomaa, Manna, Max Ovaska, Mikko Kouki</data>
+			<data key="attr0002">2013</data>
+			<data key="attr0003">Aku Louhimies</data>
+			<data key="attr0004">8-Ball</data>
+			<data key="attr0005">71.60763</data>
+			<data key="attr0006">8-Ball (2013)</data>
+		</node>
+		<node id="Parkování_2010">
+			<data key="attr0000">90</data>
+			<data key="attr0001">Colm Meaney, Colin Morgan, Milka Ahlroth, David Wilmot, Diarmuid Noyes, Conor MacNeill, Michael McElhatton, Matti Ijäs, Stuart Graham, Andy Kellegher</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003">Darragh Byrne</data>
+			<data key="attr0004">Parkování</data>
+			<data key="attr0005">77.51678</data>
+			<data key="attr0006">Parkování (2010)</data>
+		</node>
+		<node id="Dům košaté lásky_2009">
+			<data key="attr0000">102</data>
+			<data key="attr0001">Hannu-Pekka Björkman, Elina Knihtilä, Kati Outinen, Antti Reini, Tommi Eronen, Irina Björklund, Maria Järvenhelmi, Kari Väänänen, Anna Easteden, Ilkka Villi</data>
+			<data key="attr0002">2009</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Dům košaté lásky</data>
+			<data key="attr0005">63.956833</data>
+			<data key="attr0006">Dům košaté lásky (2009)</data>
+		</node>
+		<node id="Jungle Jack 2_1996">
+			<data key="attr0000">72</data>
+			<data key="attr0001">Kaya Brüel, Ole Fick, Flemming Quist Møller, Søs Egelind, Helle Ryslinge, Rick Jones, Ditte Gråbøl, Mark Camacho, Terrence Scammell, Jesper Klein</data>
+			<data key="attr0002">1996</data>
+			<data key="attr0003">Flemming Quist Møller, Jørgen Lerdam, Stefan Fjeldmark</data>
+			<data key="attr0004">Jungle Jack 2</data>
+			<data key="attr0005">55.01859</data>
+			<data key="attr0006">Jungle Jack 2 (1996)</data>
+		</node>
+		<node id="Uspávač_2017">
+			<data key="attr0000">85</data>
+			<data key="attr0001">Matti Onnismaa, Alina Tomnikov, Santtu Karvonen, Jari Virman, Heikki Nousiainen, Ilari Johansson, Pihla Penttinen, Hannamaija Nikander, Jouko Puolanto</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Teemu Nikki</data>
+			<data key="attr0004">Uspávač</data>
+			<data key="attr0005">65.35316</data>
+			<data key="attr0006">Uspávač (2017)</data>
+		</node>
+		<node id="Lieksa!_2007">
+			<data key="attr0000">90</data>
+			<data key="attr0001">Sanna-Kaisa Palo, Peter Franzén, Jenni Banerjee, Samuli Vauramo, Puntti Valtonen, Tatu Siivonen, Tuomas Uusitalo, Toni Wahlström, Lotta Lehtikari, Elina Knihtilä</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Markku Pölönen</data>
+			<data key="attr0004">Lieksa!</data>
+			<data key="attr0005">67.938934</data>
+			<data key="attr0006">Lieksa! (2007)</data>
+		</node>
+		<node id="Láska je láska_2004">
+			<data key="attr0000">99</data>
+			<data key="attr0001">Mi Grönlund, Nicke Lignell, Jasper Pääkkönen, Amira Khalifa, Hanna Kinnunen, Saija Lentonen, Jukka Puotila, Miska Kaukonen, Mika Räinä, Edvard Lammervo</data>
+			<data key="attr0002">2004</data>
+			<data key="attr0003">Minna Virtanen</data>
+			<data key="attr0004">Láska je láska</data>
+			<data key="attr0005">51.076923</data>
+			<data key="attr0006">Láska je láska (2004)</data>
+		</node>
+		<node id="Pokušení svatého Toníka_2009">
+			<data key="attr0000">115</data>
+			<data key="attr0001">Taavi Eelmaa, Ravšana Kurkova, Denis Lavant, Rain Tolk, Andres Puustusmaa, Katariina Unt, Evald Aavik, Hannes Kaljujärv, Raivo E. Tamm, Juhan Ulfsak</data>
+			<data key="attr0002">2009</data>
+			<data key="attr0003">Veiko Õunpuu</data>
+			<data key="attr0004">Pokušení svatého Toníka</data>
+			<data key="attr0005">73.64341</data>
+			<data key="attr0006">Pokušení svatého Toníka (2009)</data>
+		</node>
+		<node id="Cesta na sever_2012">
+			<data key="attr0000">110</data>
+			<data key="attr0001">Vesa-Matti Loiri, Samuli Edelmann, Leena Uotila, Eija Vilpas, Pertti Sveholm, Irina Pulkka, Krista Kosonen, Mari Perankoski, Peter Franzén, Eeva Litmanen</data>
+			<data key="attr0002">2012</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Cesta na sever</data>
+			<data key="attr0005">70.37037</data>
+			<data key="attr0006">Cesta na sever (2012)</data>
+		</node>
+		<node id="Porodní bába_2015">
+			<data key="attr0000">119</data>
+			<data key="attr0001">Krista Kosonen, Lauri Tilkanen, Pirkka-Pekka Petelius, Tommi Korpela, Leea Klemola, Seppo Pääkkönen, Johannes Brotherus, Elina Knihtilä, Tiina Weckström, Jade Viljamaa</data>
+			<data key="attr0002">2015</data>
+			<data key="attr0003">Antti J. Jokinen</data>
+			<data key="attr0004">Porodní bába</data>
+			<data key="attr0005">60.833332</data>
+			<data key="attr0006">Porodní bába (2015)</data>
+		</node>
+		<node id="Nekonečná cesta_2017">
+			<data key="attr0000">103</data>
+			<data key="attr0001">Tommi Korpela, Sidse Babett Knudsen, Irina Björklund, Hannu-Pekka Björkman, Ville Virtanen, Amalia Holm, Lembit Ulfsak, Jonna Järnefelt, Helén Söderqvist Henriksson, Jari Virman</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Antti-Jussi Annila</data>
+			<data key="attr0004">Nekonečná cesta</data>
+			<data key="attr0005">72.82511</data>
+			<data key="attr0006">Nekonečná cesta (2017)</data>
+		</node>
+		<node id="Špatná rodina_2010">
+			<data key="attr0000">92</data>
+			<data key="attr0001">Ville Virtanen, Lauri Tilkanen, Pihla Viitala, Vera Kiiskinen, Niki Seppälä, Ismo Kallio, Tomi Salmela, Minna Suuronen, Reino Nordin, Sara Paavolainen</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003">Aleksi Salmenperä</data>
+			<data key="attr0004">Špatná rodina</data>
+			<data key="attr0005">67.66355</data>
+			<data key="attr0006">Špatná rodina (2010)</data>
+		</node>
+		<node id="Hodný syn_2011">
+			<data key="attr0000">87</data>
+			<data key="attr0001">Samuli Niittymäki, Elina Knihtilä, Eero Aho, Anna Paavilainen, Eetu Julin, Kaisa Hela, Sanna-Kaisa Palo, Pekka Valkeejärvi, Simo Tamminen, Antti Raivio</data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003">Zaida Bergroth</data>
+			<data key="attr0004">Hodný syn</data>
+			<data key="attr0005">61.650486</data>
+			<data key="attr0006">Hodný syn (2011)</data>
+		</node>
+		<node id="Honey Baby_2004">
+			<data key="attr0000">103</data>
+			<data key="attr0001">Henry Thomas, Irina Björklund, Helmut Berger, Kari Väänänen, Bela B. Felsenheimer, Kai Wiesinger, Peter Franzén, Mika Kaurismäki, Maria Kaurismäki, Eike Goreczka</data>
+			<data key="attr0002">2004</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Honey Baby</data>
+			<data key="attr0005">67.1066</data>
+			<data key="attr0006">Honey Baby (2004)</data>
+		</node>
+		<node id="Elina_2002">
+			<data key="attr0000">77</data>
+			<data key="attr0001">Natalie Minnevik, Bibi Andersson, Marjaana Maijala, Henrik Rafaelsen, Björn Granath, Jarl Lindblad, Sara Arnia, Tind Soneby</data>
+			<data key="attr0002">2002</data>
+			<data key="attr0003">Klaus Härö</data>
+			<data key="attr0004">Elina</data>
+			<data key="attr0005">79.79275</data>
+			<data key="attr0006">Elina (2002)</data>
+		</node>
+		<node id="Syvälle salattu_2011">
+			<data key="attr0000">105</data>
+			<data key="attr0001">Krista Kosonen, Peter Franzén, Kai Lehtinen, Viljami Nojonen, Risto Aaltonen, Kari Hietalahti, Ilkka Villi, Katriina Hyvärinen, Pentti Korhonen, Panu Vauhkonen</data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003">Joona Tena</data>
+			<data key="attr0004">Syvälle salattu</data>
+			<data key="attr0005">50.106384</data>
+			<data key="attr0006">Syvälle salattu (2011)</data>
+		</node>
+		<node id="Zombie a vlak duchů_1991">
+			<data key="attr0000">88</data>
+			<data key="attr0001">Silu Seppälä, Marjo Leinonen, Matti Pellonpää, Vieno Saaristo, Juhani Niemelä, Kauko Laurikainen, Sakari Järvenpää, Mato Valtonen, Mauri Sumén, Jyri Närvänen</data>
+			<data key="attr0002">1991</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Zombie a vlak duchů</data>
+			<data key="attr0005">72.666664</data>
+			<data key="attr0006">Zombie a vlak duchů (1991)</data>
+		</node>
+		<node id="Byl jsem tady_2008">
+			<data key="attr0000">89</data>
+			<data key="attr0001">Rasmus Kaljujärv, Doris Tislar, Marilyn Jurman, Hele Kõre-Kõrve, Tambet Tuisk, Margus Prangel, Johannes Naan, Nikolai Bentsler, Märt Avandi, Jaan Rekkor</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">René Vilbre</data>
+			<data key="attr0004">Byl jsem tady</data>
+			<data key="attr0005">69.47369</data>
+			<data key="attr0006">Byl jsem tady (2008)</data>
+		</node>
+		<node id="Chlapci od svatého Petra_1991">
+			<data key="attr0000">111</data>
+			<data key="attr0001">Tomas Villum Jensen, Morten Buch Jørgensen, Bent Mejding, Helle Merete Sørensen, Nikolaj Lie Kaas, Christian Grønvall, Karl Miller Bille, Joachim Knop, Xenia Lach-Nielsen, Philip Zandén</data>
+			<data key="attr0002">1991</data>
+			<data key="attr0003">Søren Kragh-Jacobsen</data>
+			<data key="attr0004">Chlapci od svatého Petra</data>
+			<data key="attr0005">62.275448</data>
+			<data key="attr0006">Chlapci od svatého Petra (1991)</data>
+		</node>
+		<node id="Planeta šneků_2011">
+			<data key="attr0000">88</data>
+			<data key="attr0001"></data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003">Seung-jun Yi</data>
+			<data key="attr0004">Planeta šneků</data>
+			<data key="attr0005">79.756096</data>
+			<data key="attr0006">Planeta šneků (2011)</data>
+		</node>
+		<node id="Princezna_2010">
+			<data key="attr0000">100</data>
+			<data key="attr0001">Katja Küttner, Samuli Edelmann, Krista Kosonen, Peter Franzén, Pirkka-Pekka Petelius, Paavo Westerberg, Antti Litja, Irma Junnilainen, Paula Vesala, Joanna Haartti</data>
+			<data key="attr0002">2010</data>
+			<data key="attr0003">Arto Halonen</data>
+			<data key="attr0004">Princezna</data>
+			<data key="attr0005">65.64103</data>
+			<data key="attr0006">Princezna (2010)</data>
+		</node>
+		<node id="Rozumné řešení_2009">
+			<data key="attr0000">98</data>
+			<data key="attr0001">Rolf Lassgård, Pernilla August, Stina Ekblad, Claes Ljungmark, Magnus Roosmann, Anki Lidén, Magnus Eriksson, Johan Storgård, Anna Godenius, Peter Öberg</data>
+			<data key="attr0002">2009</data>
+			<data key="attr0003">Jörgen Bergmark</data>
+			<data key="attr0004">Rozumné řešení</data>
+			<data key="attr0005">69.29032</data>
+			<data key="attr0006">Rozumné řešení (2009)</data>
+		</node>
+		<node id="Italský klíč_2011">
+			<data key="attr0000">95</data>
+			<data key="attr0001">Gwendolyn Anslow, Joana Cartocci, Leo Vertunni, Mikko Leppilampi, Moose Ali Khan, John Shea, Peter O. Almond, Andreas Wilson, Elisa Cartocci, Isadora Cartocci</data>
+			<data key="attr0002">2011</data>
+			<data key="attr0003">Rosa Karo</data>
+			<data key="attr0004">Italský klíč</data>
+			<data key="attr0005">51.42857</data>
+			<data key="attr0006">Italský klíč (2011)</data>
+		</node>
+		<node id="Vlk_2008">
+			<data key="attr0000">91</data>
+			<data key="attr0001">Peter Stormare, Anitta Suikkari, Ingar Helge Gimle, Annika Nordin, Åke Arvidsson, Svante Martin, Marie Delleskog, Bo Samuelson, Sven Henriksen, Nils-Josef Labba</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Daniel Alfredson</data>
+			<data key="attr0004">Vlk</data>
+			<data key="attr0005">65.09804</data>
+			<data key="attr0006">Vlk (2008)</data>
+		</node>
+		<node id="Práce pro chlapa_2007">
+			<data key="attr0000">97</data>
+			<data key="attr0001">Tommi Korpela, Maria Heiskanen, Jani Volanen, Stan Saanila, Konsta Pylkkönen, Noora Dadu, Joanna Haartti, Kaarina Hazard, Vilma Juutilainen, Helmi Kaartinen</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Aleksi Salmenperä</data>
+			<data key="attr0004">Práce pro chlapa</data>
+			<data key="attr0005">67.86667</data>
+			<data key="attr0006">Práce pro chlapa (2007)</data>
+		</node>
+		<node id="Raja 1918_2007">
+			<data key="attr0000">114</data>
+			<data key="attr0001">Martin Bahne, Minna Haapkylä, Tommi Korpela, Leonid Mozgovoj, Hannu-Pekka Björkman, Lauri Nurkse, Risto Kaskilahti, Orvo Björninen, Pauli Poranen, Roman Schatz</data>
+			<data key="attr0002">2007</data>
+			<data key="attr0003">Lauri Törhönen</data>
+			<data key="attr0004">Raja 1918</data>
+			<data key="attr0005">75.2</data>
+			<data key="attr0006">Raja 1918 (2007)</data>
+		</node>
+		<node id="Bílý sob_1952">
+			<data key="attr0000">74</data>
+			<data key="attr0001">Mirjami Kuosmanen, Kalervo Nissilä, Åke Lindman, Jouni Tapiola, Arvo Lehesmaa, Tyyne Haarla, Kauko Laurikainen, Pentti Irjala, Evald Terho, Heimo Lepistö</data>
+			<data key="attr0002">1952</data>
+			<data key="attr0003">Erik Blomberg</data>
+			<data key="attr0004">Bílý sob</data>
+			<data key="attr0005">67.246376</data>
+			<data key="attr0006">Bílý sob (1952)</data>
+		</node>
+		<node id="Lhář_1981">
+			<data key="attr0000">53</data>
+			<data key="attr0001">Aki Kaurismäki, Pirkko Hämäläinen, Juuso Hirvikangas, Lars Lindberg, Esa Sirkkunen, Jukka Järvelä, Marja Heiskanen, Matti Pellonpää, Mikko Mattila, Taina Nyström</data>
+			<data key="attr0002">1981</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Lhář</data>
+			<data key="attr0005">74.80315</data>
+			<data key="attr0006">Lhář (1981)</data>
+		</node>
+		<node id="Výrobna dospělých_2004">
+			<data key="attr0000">102</data>
+			<data key="attr0001">Minna Haapkylä, Kari-Pekka Toivonen, Minttu Mustakallio, Tommi Eronen, Pekka Strang, Dick Idman, Antti Raivio, Saara Pakkasvirta, Meri Nenonen, Juha Kukkonen</data>
+			<data key="attr0002">2004</data>
+			<data key="attr0003">Aleksi Salmenperä</data>
+			<data key="attr0004">Výrobna dospělých</data>
+			<data key="attr0005">67.40157</data>
+			<data key="attr0006">Výrobna dospělých (2004)</data>
+		</node>
+		<node id="Chvíle v rákosí_2017">
+			<data key="attr0000">108</data>
+			<data key="attr0001">Janne Puustinen, Mika Melender, Virpi Rautsiala, Boodi Kabbani</data>
+			<data key="attr0002">2017</data>
+			<data key="attr0003">Mikko Mäkelä</data>
+			<data key="attr0004">Chvíle v rákosí</data>
+			<data key="attr0005">73.22835</data>
+			<data key="attr0006">Chvíle v rákosí (2017)</data>
+		</node>
+		<node id="Vyvrhelové_1982">
+			<data key="attr0000">119</data>
+			<data key="attr0001">Matti Pellonpää, Pirkko Hämäläinen, Juuso Hirvikangas, Esko Nikkari, Jorma Markkula, Asmo Hurula, Ari Piispa, Aki Kaurismäki, Aino Seppo, Veikko Aaltonen</data>
+			<data key="attr0002">1982</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">Vyvrhelové</data>
+			<data key="attr0005">77.72358</data>
+			<data key="attr0006">Vyvrhelové (1982)</data>
+		</node>
+		<node id="My tři králové_2008">
+			<data key="attr0000">98</data>
+			<data key="attr0001">Kari Heiskanen, Pertti Sveholm, Timo Torikka, Irina Björklund, Tommi Eronen, Elena Spirina, Pirkko Hämäläinen, Riitta Havukainen, Aake Kalliala, Peter Franzén</data>
+			<data key="attr0002">2008</data>
+			<data key="attr0003">Mika Kaurismäki</data>
+			<data key="attr0004">My tři králové</data>
+			<data key="attr0005">68.61789</data>
+			<data key="attr0006">My tři králové (2008)</data>
+		</node>
+		<node id="Kuutamolla_2002">
+			<data key="attr0000">113</data>
+			<data key="attr0001">Minna Haapkylä, Anna-Leena Härkönen, Laura Malmivaara, Peter Franzén, Matti Ristinen, Mikko Kouki, Pirkko Saisio, Santeri Nuutinen, Rasmus Nuutinen, Valtteri Roiha</data>
+			<data key="attr0002">2002</data>
+			<data key="attr0003">Aku Louhimies</data>
+			<data key="attr0004">Kuutamolla</data>
+			<data key="attr0005">68.644066</data>
+			<data key="attr0006">Kuutamolla (2002)</data>
+		</node>
+		<node id="Kerron sinulle kaiken_2013">
+			<data key="attr0000">95</data>
+			<data key="attr0001">Leea Klemola, Peter Franzén, Ria Kataja, Emmi Nivala, Alex Anton, Maria Heiskanen, Laura Malmivaara, Juhani Laitala, Marika Parkkomäki, Seppo Halttunen</data>
+			<data key="attr0002">2013</data>
+			<data key="attr0003">Simo Halinen</data>
+			<data key="attr0004">Kerron sinulle kaiken</data>
+			<data key="attr0005">68.64865</data>
+			<data key="attr0006">Kerron sinulle kaiken (2013)</data>
+		</node>
+		<node id="Uprchlíci_2014">
+			<data key="attr0000">102</data>
+			<data key="attr0001">Roosa Söderholm, Teppo Manner, Jari Pehkonen, Sara Paavolainen, Pelle Heikkilä, Petteri Pennilä, Ari Murto, Jesse Vinnari, Sam-Peter Jokinen, Reijo Kontio</data>
+			<data key="attr0002">2014</data>
+			<data key="attr0003">Jukka-Pekka Valkeapää</data>
+			<data key="attr0004">Uprchlíci</data>
+			<data key="attr0005">52.77778</data>
+			<data key="attr0006">Uprchlíci (2014)</data>
+		</node>
+		<node id="Třicet dva krátkých filmů o Glennu Gouldovi_1993">
+			<data key="attr0000">98</data>
+			<data key="attr0001">Colm Feore, Don McKellar, Yehudi Menuhin, Carlo Rota, Gale Garnett, Bruno Monsaingeon, James Kidnie, Michael Kopsa, Guy Thauvette, R.D. Reid</data>
+			<data key="attr0002">1993</data>
+			<data key="attr0003">François Girard</data>
+			<data key="attr0004">Třicet dva krátkých filmů o Glennu Gouldovi</data>
+			<data key="attr0005">79.809525</data>
+			<data key="attr0006">Třicet dva krátkých filmů o Glennu Gouldovi (1993)</data>
+		</node>
+		<edge id="Muž bez minulosti_2002_Le Havre_2011" source="Muž bez minulosti_2002" target="Le Havre_2011" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Druhá strana naděje_2017" source="Muž bez minulosti_2002" target="Druhá strana naděje_2017" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Dalších deset minut_2002" source="Muž bez minulosti_2002" target="Dalších deset minut_2002" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Děvče ze sirkárny_1990" source="Muž bez minulosti_2002" target="Děvče ze sirkárny_1990" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Mraky odtáhly_1996" source="Muž bez minulosti_2002" target="Mraky odtáhly_1996" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Stíny v ráji_1986" source="Muž bez minulosti_2002" target="Stíny v ráji_1986" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Juha_1999" source="Muž bez minulosti_2002" target="Juha_1999" directed="false">
+		</edge>
+		<edge id="Muž bez minulosti_2002_Hamlet podniká_1987" source="Muž bez minulosti_2002" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Domov šedých motýlů_2008_Láska, soudruhu_2013" source="Domov šedých motýlů_2008" target="Láska, soudruhu_2013" directed="false">
+		</edge>
+		<edge id="Le Havre_2011_Bohémský život_1992" source="Le Havre_2011" target="Bohémský život_1992" directed="false">
+		</edge>
+		<edge id="Le Havre_2011_Děvče ze sirkárny_1990" source="Le Havre_2011" target="Děvče ze sirkárny_1990" directed="false">
+		</edge>
+		<edge id="Le Havre_2011_Mraky odtáhly_1996" source="Le Havre_2011" target="Mraky odtáhly_1996" directed="false">
+		</edge>
+		<edge id="Le Havre_2011_Juha_1999" source="Le Havre_2011" target="Juha_1999" directed="false">
+		</edge>
+		<edge id="Le Havre_2011_Hamlet podniká_1987" source="Le Havre_2011" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Legenda o Vánocích_2007_8-Ball_2013" source="Legenda o Vánocích_2007" target="8-Ball_2013" directed="false">
+		</edge>
+		<edge id="Legenda o Vánocích_2007_Dům košaté lásky_2009" source="Legenda o Vánocích_2007" target="Dům košaté lásky_2009" directed="false">
+		</edge>
+		<edge id="Legenda o Vánocích_2007_Raja 1918_2007" source="Legenda o Vánocích_2007" target="Raja 1918_2007" directed="false">
+		</edge>
+		<edge id="Legenda o Vánocích_2007_Kuutamolla_2002" source="Legenda o Vánocích_2007" target="Kuutamolla_2002" directed="false">
+		</edge>
+		<edge id="Druhá strana naděje_2017_Světla v soumraku_2006" source="Druhá strana naděje_2017" target="Světla v soumraku_2006" directed="false">
+		</edge>
+		<edge id="Druhá strana naděje_2017_Nekonečná cesta_2017" source="Druhá strana naděje_2017" target="Nekonečná cesta_2017" directed="false">
+		</edge>
+		<edge id="Dalších deset minut_2002_Mraky odtáhly_1996" source="Dalších deset minut_2002" target="Mraky odtáhly_1996" directed="false">
+		</edge>
+		<edge id="Dalších deset minut_2002_Juha_1999" source="Dalších deset minut_2002" target="Juha_1999" directed="false">
+		</edge>
+		<edge id="Lví srdce_2013_Laponská odysea_2010" source="Lví srdce_2013" target="Laponská odysea_2010" directed="false">
+		</edge>
+		<edge id="Děvče ze sirkárny_1990_Láska, soudruhu_2013" source="Děvče ze sirkárny_1990" target="Láska, soudruhu_2013" directed="false">
+		</edge>
+		<edge id="Děvče ze sirkárny_1990_Mraky odtáhly_1996" source="Děvče ze sirkárny_1990" target="Mraky odtáhly_1996" directed="false">
+		</edge>
+		<edge id="Děvče ze sirkárny_1990_Stíny v ráji_1986" source="Děvče ze sirkárny_1990" target="Stíny v ráji_1986" directed="false">
+		</edge>
+		<edge id="Děvče ze sirkárny_1990_Juha_1999" source="Děvče ze sirkárny_1990" target="Juha_1999" directed="false">
+		</edge>
+		<edge id="Děvče ze sirkárny_1990_Hamlet podniká_1987" source="Děvče ze sirkárny_1990" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Světla v soumraku_2006_Dům košaté lásky_2009" source="Světla v soumraku_2006" target="Dům košaté lásky_2009" directed="false">
+		</edge>
+		<edge id="Láska, soudruhu_2013_Hamlet podniká_1987" source="Láska, soudruhu_2013" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Mraky odtáhly_1996_Stíny v ráji_1986" source="Mraky odtáhly_1996" target="Stíny v ráji_1986" directed="false">
+		</edge>
+		<edge id="Mraky odtáhly_1996_Juha_1999" source="Mraky odtáhly_1996" target="Juha_1999" directed="false">
+		</edge>
+		<edge id="Mraky odtáhly_1996_Hamlet podniká_1987" source="Mraky odtáhly_1996" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Mraky odtáhly_1996_Dům košaté lásky_2009" source="Mraky odtáhly_1996" target="Dům košaté lásky_2009" directed="false">
+		</edge>
+		<edge id="Stíny v ráji_1986_Juha_1999" source="Stíny v ráji_1986" target="Juha_1999" directed="false">
+		</edge>
+		<edge id="Stíny v ráji_1986_Zločin a trest_1983" source="Stíny v ráji_1986" target="Zločin a trest_1983" directed="false">
+		</edge>
+		<edge id="Stíny v ráji_1986_Hamlet podniká_1987" source="Stíny v ráji_1986" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Stíny v ráji_1986_Vyvrhelové_1982" source="Stíny v ráji_1986" target="Vyvrhelové_1982" directed="false">
+		</edge>
+		<edge id="Juha_1999_Hamlet podniká_1987" source="Juha_1999" target="Hamlet podniká_1987" directed="false">
+		</edge>
+		<edge id="Věčný bojovník_2006_My tři králové_2008" source="Věčný bojovník_2006" target="My tři králové_2008" directed="false">
+		</edge>
+		<edge id="Rozkaz_2008_8-Ball_2013" source="Rozkaz_2008" target="8-Ball_2013" directed="false">
+		</edge>
+		<edge id="Ariel_1988_Vyvrhelové_1982" source="Ariel_1988" target="Vyvrhelové_1982" directed="false">
+		</edge>
+		<edge id="Tom of Finland_2017_Výrobna dospělých_2004" source="Tom of Finland_2017" target="Výrobna dospělých_2004" directed="false">
+		</edge>
+		<edge id="Zločin a trest_1983_Vyvrhelové_1982" source="Zločin a trest_1983" target="Vyvrhelové_1982" directed="false">
+		</edge>
+		<edge id="Automat na lásku_2000_Kuutamolla_2002" source="Automat na lásku_2000" target="Kuutamolla_2002" directed="false">
+		</edge>
+		<edge id="Hamlet podniká_1987_Dům košaté lásky_2009" source="Hamlet podniká_1987" target="Dům košaté lásky_2009" directed="false">
+		</edge>
+		<edge id="Černý led_2007_Zákon ledové země_2017" source="Černý led_2007" target="Zákon ledové země_2017" directed="false">
+		</edge>
+		<edge id="Černý led_2007_Na druhé straně_2010" source="Černý led_2007" target="Na druhé straně_2010" directed="false">
+		</edge>
+		<edge id="Černý led_2007_Špatná rodina_2010" source="Černý led_2007" target="Špatná rodina_2010" directed="false">
+		</edge>
+		<edge id="Královna Kristýna_2015_Zákon ledové země_2017" source="Královna Kristýna_2015" target="Zákon ledové země_2017" directed="false">
+		</edge>
+		<edge id="Zákon ledové země_2017_Na druhé straně_2010" source="Zákon ledové země_2017" target="Na druhé straně_2010" directed="false">
+		</edge>
+		<edge id="Dům košaté lásky_2009_Nekonečná cesta_2017" source="Dům košaté lásky_2009" target="Nekonečná cesta_2017" directed="false">
+		</edge>
+		<edge id="Dům košaté lásky_2009_Honey Baby_2004" source="Dům košaté lásky_2009" target="Honey Baby_2004" directed="false">
+		</edge>
+		<edge id="Dům košaté lásky_2009_My tři králové_2008" source="Dům košaté lásky_2009" target="My tři králové_2008" directed="false">
+		</edge>
+		<edge id="Lieksa!_2007_Hodný syn_2011" source="Lieksa!_2007" target="Hodný syn_2011" directed="false">
+		</edge>
+		<edge id="Cesta na sever_2012_Syvälle salattu_2011" source="Cesta na sever_2012" target="Syvälle salattu_2011" directed="false">
+		</edge>
+		<edge id="Cesta na sever_2012_Princezna_2010" source="Cesta na sever_2012" target="Princezna_2010" directed="false">
+		</edge>
+		<edge id="Cesta na sever_2012_My tři králové_2008" source="Cesta na sever_2012" target="My tři králové_2008" directed="false">
+		</edge>
+		<edge id="Porodní bába_2015_Princezna_2010" source="Porodní bába_2015" target="Princezna_2010" directed="false">
+		</edge>
+		<edge id="Nekonečná cesta_2017_Raja 1918_2007" source="Nekonečná cesta_2017" target="Raja 1918_2007" directed="false">
+		</edge>
+		<edge id="Honey Baby_2004_My tři králové_2008" source="Honey Baby_2004" target="My tři králové_2008" directed="false">
+		</edge>
+		<edge id="Syvälle salattu_2011_Princezna_2010" source="Syvälle salattu_2011" target="Princezna_2010" directed="false">
+		</edge>
+		<edge id="Lhář_1981_Vyvrhelové_1982" source="Lhář_1981" target="Vyvrhelové_1982" directed="false">
+		</edge>
+		<edge id="Kuutamolla_2002_Kerron sinulle kaiken_2013" source="Kuutamolla_2002" target="Kerron sinulle kaiken_2013" directed="false">
+		</edge>
+	</graph>
+</graphml>
