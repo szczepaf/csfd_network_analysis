@@ -2,7 +2,7 @@
 ČSFD Network Analysis
 
 ### Description:
-ČSFD Network Analysis is a project focused on creating network models based on data from the ČSFD database. The goal is to construct a complex network consisting of films connected if they satisfy a specified condition, but it is written to be extendable to create networks of other media entities (Actors, directors, etc.). Users can load films into the network, create edges between films based on certain conditions, visualize the network, export network data in common graph formats, and download additional film data from the ČSFD portal.
+ČSFD Network Analysis is a project focused on building, visualizing and exporting network models based on data from the ČSFD database. The goal is to construct a complex network consisting of films connected if they satisfy a specified condition, but it is written to be extendable to create networks of other media entities (Actors, directors, etc.). Users can load films into the network, create edges between films based on certain conditions, visualize the network, export network data in common graph formats, and download additional film data from the ČSFD portal.
 
 ### Operating System:
 Cross-platform
