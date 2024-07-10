@@ -1,6 +1,9 @@
 ### Title:
 ČSFD Network Analysis
 
+![image](https://github.com/szczepaf/csfd_network_analysis/assets/83585883/093fbd84-08a4-4e7c-8b76-d7f2d45184fc)
+
+
 ### Description:
 ČSFD Network Analysis is a project focused on building, visualizing and exporting network models based on data from the ČSFD database. The goal is to construct a complex network consisting of films connected if they satisfy a specified condition, but it is written to be extendable to create networks of other media entities (Actors, directors, etc.). Users can load films into the network, create edges between films based on certain conditions, visualize the network, export network data in common graph formats, and download additional film data from the ČSFD portal.
 
