@@ -22,7 +22,7 @@ IntelliJ IDEA
 ### Go-To
  - For the installation guide, refer to the file **installation_guide.md**.
  - For the user guide, refer to the file **user_guide.pdf**.
- - 
+ - For a detailed specification of the program architecture, refer to the file **detailed_specification.md**. 
  -
 
 
