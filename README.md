@@ -22,11 +22,11 @@ Java
 ### Development Environment:
 IntelliJ IDEA
 
-### Go-To
+### Documentation and specification
  - For the installation guide, refer to the file **installation_guide.md**.
  - For the user guide, refer to the file **user_guide.pdf**.
  - For a detailed specification of the program architecture, refer to the file **detailed_specification.md**. 
- -
+ - For more details into technical solutions, refer to the file **technical_doc.md**.
 
 
 ### Disclaimer
