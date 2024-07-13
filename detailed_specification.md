@@ -36,5 +36,5 @@ There should be the option to visualize the network so that the user has some se
 ### Network export
 For further analysis of the network, it is desirable to be able to export it. Again, we use functions of the GraphStream library and offer the user the option to export the network to the GraphML format, which is one of the more common graph formats that are easily loadable by libraries like NetworkX.
 
-### Network interface
+### User interface
 The selected user interface is a console. It queries the user about the current action and provides help if asked. In every step, the user selects which step (data download, link fetching, network export, etc.) to do, and the console either facilitates the action if the user input is correct or prints out an error message and suitable help. The user terminates the program with some selected command.
